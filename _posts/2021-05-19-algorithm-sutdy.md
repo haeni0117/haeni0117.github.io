@@ -1,3 +1,18 @@
+---
+title:  "알고리즘 공부기록"
+excerpt: "md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자. "
+
+categories:
+  - Algorithm
+tags:
+  - [Blog, jekyll, Github, Git]
+
+toc: true
+toc_sticky: true
+ 
+date: 2021-05-19
+last_modified_at: 2021-06-25
+---
 ## BOJ algorithm study 백준문제풀이 + 알고리즘공부
 - commit message는 날짜+요일로 통일하기 
 
