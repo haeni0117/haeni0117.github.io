@@ -1,6 +1,6 @@
 ---
-title: "github.io 블로그 시작하기"
-excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
+title: "유니티로 똥피하기 게임 제작일지 - 1"
+excerpt: "Dev GomDol님의 제작영상을 시청 후 똥피하기 게임 제작과정을 정리하였습니다."
 
 categories:
   - Blog
