@@ -14,6 +14,6 @@ last_modified_at: 2019-04-13T08:06:00-05:00
 UNITY를 사용하는 사람이라면 누구나 그렇겠지만, 똑같은 아이콘이지만 흰색 배경인 UNITY HUB와 검은 배경인 UNITY 두 개 모두 설치되어 있어야 원활한 진행이 가능하다. 예전에 UNITY Hub가 없었을 시절에는 개발자가 일일이 설정해주는 과정이 필요했었다는데, 유니티 허브가 존재하는 시대에 개발할 수 있어서 얼마나 다행인지 모른다. 
 
 유니티 허브(흰색 배경)에 들어가면 이렇게 진행중인 프로젝트를 볼 수 있고 오른쪽 상단에 있는 <b>추가</b>버튼을 통해서 새로운 프로젝트를 생성할 수 있다.
-![pic1](Users/gimsuyeon/Documents/GitHub/haeni0117.github.io/_posts/image/poopavoid3.png)
+<img width="974" alt="poopavoid1" src="https://user-images.githubusercontent.com/69496570/133953148-2cfbc1d6-6708-4b9b-90ea-f6af1b90ffcd.png">ㅎㅎ
 우리가 만들 똥피하기 게임은 단순한 2D게임이기 때문에 2D로 지정해 준 후 프로젝트를 만들어보자.ㅋㅋ
 ![pic1](./image/poopavoid2.png)
