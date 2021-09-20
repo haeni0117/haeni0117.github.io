@@ -98,7 +98,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "interested in UNITY, interactive design, UX"
   location         : "Somewhere"
-  email            :"ksy56470117@gmail.com"
+
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
