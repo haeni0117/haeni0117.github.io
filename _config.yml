@@ -94,11 +94,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Su Yeon Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "interested in UNITY, interactive design, UX"
   location         : "Somewhere"
-  email            :
+  email            :"ksy56470117@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
