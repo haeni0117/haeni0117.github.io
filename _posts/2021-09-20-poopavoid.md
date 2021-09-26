@@ -2,7 +2,7 @@
 title: "유니티로 똥피하기 게임 제작일지 - 1"
 excerpt: "Dev GomDol님의 제작영상을 시청 후 똥피하기 게임 제작과정을 정리하였습니다."
 
-categories:
+category:
   - [UNITY]
 tags:
   - Blog
