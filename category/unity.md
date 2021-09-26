@@ -1,5 +1,4 @@
 ---
 layout: category
-
-title: UNITY
+title: unity
 ---
