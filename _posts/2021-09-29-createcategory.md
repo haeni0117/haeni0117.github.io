@@ -1,0 +1,61 @@
+---
+title: "깃허브(github) 블로그 카테고리 만들기"
+excerpt: "아무리 구글링해서 나오는 글들 찾아봐도 안되길래 직접 유튜브에서 영상보고 찾았다."
+
+categories:
+  - Blog
+tags:
+  - Blog
+last_modified_at: 2021-09-27T08:06:00-05:00
+---
+## 깃허브 블로그에 카테고리 생성하기
+
+깃허브 블로그에 쓰는 글들의 색깔도 다양해지면서 카테고리를 통해 분류해야할 필요성을 느끼게 되었다. 커스터마이징이 최고 장점으로 꼽힌다는 이유로 티스토리에서 github.io로 넘어온 사람으로서 커스터마이징은 무슨, 
+카테고리도 못 만들고 있다는 게 너무 답답했다. 이것저것 구글링을 했지만, 나만 그런건지 아무리 따라해봐도 내 깃허브페이지에서는 먹히지가 않았다. 
+
+그래서 이번에는 유튜브에서 한 번 서치해보자!하고 영상들을 둘러보고 있는 와중에 가뭄에 단비같은 영상을 발견했다. 바로 BLEX님의 '깃허브 블로그 카테고리 생성 방법 | 깃허브 사용법(4)'라는 영상이었다.
+영상에 나오는 코드설명대로 직접 `home.html`부터 수정을 해보니, 정말 바뀌는 깃허브페이지를 보면서 묵은 체증이 내려가는듯한 느낌을 받았다. 이런 좋은 걸 나만 알 수는 없지. 
+그래서 기록 겸 깃허브 블로그 카테고리 생성이라는 키워드로 구글링하면 나오는 방법이 안먹힌다!! 하는 사람들에게 도움이 되는 글을 써보려고 한다.
+
+나도 구글링을 통해 깃허브 블로그를 만들게 되어서, 가르쳐주신 분들이 했던 절차를 그대로 밟았더니 
+나 역시도 사람들이 가장 많이 사용하는 minimal-mistakes를 사용하게 되었다. 물론 커스터마이징의 대가답게 minimal-mistakes뿐만 아니라 수많은 소스들이 있으니, 나는 조금 더 색다른 디자인을 원한다라고 하면 
+아래의 사이트에서 여러가지 양식을 둘러보고 github.io에 사용하는 것을 추천한다.
+![image](https://user-images.githubusercontent.com/69496570/135148079-bd5e0679-a777-428c-abb7-aea8a97c64e8.png)
+위의 사이트는 http://jekyllthemes.org/ 라는 사이트이고, Github의 내부엔진인 Jekyll을 사용하여 다양한 테마들을 공유하고 공유받는 사이트이다. 물론 직접 코딩을 해서 입맛대로 바꿀 수도 있지만,
+그렇게까지 디자인에 공을 들이고 싶지는 않은데, 한 번 내 깃헙 블로그에 변화를 주고 싶다면 위 사이트가 유용할 것이다. 리드미파일에 사용방법에 대해 자세히 나와있을테니 관심이 있는 사람은 직접 찾아보면 된다.
+
+나는 직접 코딩으로 커스터마이징하고 싶기 때문에 코드를 건드려보겠다.
+
+1. 일단 자신의 깃허브블로그 레파지토리에 들어간다. 그러면 아래와 같은 디렉토리 및 파일들을 볼 수 있다. 
+ ![image](https://user-images.githubusercontent.com/69496570/135148849-d89abfb5-7eda-4f67-869f-85298b9156cd.png)
+ 
+2. 여기에서 `_layouts`디렉토리에 들어간 후 `home.html`을 클릭한다.
+
+처음 이 html파일의 코드를 보면 아마 이런 식으로 되어있을 것이다.
+![image](https://user-images.githubusercontent.com/69496570/135149214-f6d80a95-9a02-4761-81f1-13f71a274af1.png)
+```
+---
+layout: archive
+---
+
+{{ content }}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
+
+
+{% include paginator.html %}
+```
+ 
+
