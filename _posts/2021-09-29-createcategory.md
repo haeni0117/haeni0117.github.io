@@ -34,28 +34,13 @@ last_modified_at: 2021-09-27T08:06:00-05:00
 처음 이 html파일의 코드를 보면 아마 이런 식으로 되어있을 것이다.
 ![image](https://user-images.githubusercontent.com/69496570/135149214-f6d80a95-9a02-4761-81f1-13f71a274af1.png)
 ```
----
-layout: archive
----
-
-{{ content }}
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+<div class ="category">
+  {% for category in site.categories %}
+    {{ category | first }}
   {% endfor %}
 </div>
-
-
-{% include paginator.html %}
 ```
- 
-
+위의 코드를 `home.html`에 추가하면 아무것도 없었던 내 깃허브블로그의 Recent Post 아래에 'docker', 'blog'와 같이 카테고리들이 생긴다.
+![image](https://user-images.githubusercontent.com/69496570/135150109-e5f61a53-8cac-4da5-a205-ebd93488bf53.png)
+![image](https://user-images.githubusercontent.com/69496570/135149848-d993272f-a396-43ad-abf0-5d12f7baf568.png)
+  
