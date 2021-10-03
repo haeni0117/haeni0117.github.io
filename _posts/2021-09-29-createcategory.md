@@ -30,8 +30,31 @@ last_modified_at: 2021-09-27T08:06:00-05:00
  ![image](https://user-images.githubusercontent.com/69496570/135148849-d89abfb5-7eda-4f67-869f-85298b9156cd.png)
  
 ### 2. posts 디렉토리의 각 파일에 `categories`라는 변수를 생성해준다. 
-![image](https://user-images.githubusercontent.com/69496570/135767617-96671a44-7aaa-4f37-ae92-8a3909efccc4.png)31ca1a7abb4f.png)
+![image](https://user-images.githubusercontent.com/69496570/135767617-96671a44-7aaa-4f37-ae92-8a3909efccc4.png)
 위의 파일은 일주일동안 있었던 일들과 감정, 생각을 담은 글이기 때문에 categories를 diary로 생성한다. 여기서 주의할 점은 categories라는 변수를 생성해준 다음, 위의 그림처럼 리스트형태로 카테고리 유형을 나열해야한다는 것이다. 그리고 posts 디렉토리에 있는 다른 파일들에도 `cateogories`라는 변수를 추가해준다.
+
+카테고리는 꼭 하나가 아니어도 된다. 하나의 글에 여러가지 성격이 있을 수 있기 때문에 (예를 들어, C#프로그래밍에 관련된 글이면 programming, c# 두 가지의 성격을 가지는 것!)
+여러개의 요소를 사용할 수 있는 것이 바로 리스트를 쓰는 이유 아니겠는가!
+
+하지만 `categories`라는 변수를 그냥 포스트에 넣기만 한다고 바로 사용할 수 있는 것은 아니다. 이제는 이 변수를 어떻게 posts의 각 파일로 가져올지에 대해 알아보자.
+우리는 카테고리를 홈(메인 페이지)에 띄울 것이다. 그럼 테스트로 한 번 띄워보자.
+
+참고로 지킬블로그에서는 리퀴드라고 불리는 프로그래밍 언어를 사용하고 있다. 그렇게 문법이 어려운 것이 아니기 때문에, 필요할 때마다 구글링을 통해서 이해하는 것을 추천한다.
+
+### 3. 카테고리 불러오기
+`_layouts`디렉토리에 들어간 후 `home.html`를 수정한다. 먼저 category에 관한 클래스를 생성하여 <div></div>영역을 생성해준다. 그 후 아래의 코드를 사용해서 사이트의 카테고리(`site.categories`)를 불러온다. 이 변수 안에 아까 step2에서 생성했던 리스트요소들이 들어있다. 따라서 우리는 이 리스트를 순회하면서 카테고리를 출력해준다.
+![image](https://user-images.githubusercontent.com/69496570/135768286-960b5cc1-c97c-4abb-bc72-a9e72b6d06b1.png)
+
+리퀴드 문법에서 우리가 일반적으로 알고 있는 for문을 사용하는 방식은 다른 언어들과 조금 다르니, 아래의 코드를 참고하자.
+![image](https://user-images.githubusercontent.com/69496570/135768414-189ce47f-ae30-49ec-99dd-79e55c163df3.png)
+
+아까 봤던 `site.categories`라는 변수는 우리가 불러올 것들 그 자체이기 때문에 이 리스트를 다른 변수안에 넣어준다. 이 리스트를 넣어줄 변수명은 `category`라고 하자. 
+이 부분에 관련된 코드는 다른 언어와 비슷하니 따라하는 데에 크게 무리가 없으리라고 생각된다.
+![image](https://user-images.githubusercontent.com/69496570/135768515-38771983-96e5-4d83-a7ba-a6730ccf2ca0.png)
+결국 요약하자면 리스트에 있는 내용(`site.categories`)들을 `category`라는 변수(A in B)에 넣으면서 순환(for문)하게 되는 것이다.
+그리고 카테고리라는 변수를 출력해보자.
+
+
 
 ### 2. 여기에서 `_layouts`디렉토리에 들어간 후 `home.html`를 수정한다.
 
