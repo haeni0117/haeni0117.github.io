@@ -29,6 +29,10 @@ last_modified_at: 2021-09-27T08:06:00-05:00
 ### 1. 일단 자신의 깃허브블로그 레파지토리에 들어간다. 그러면 아래와 같은 디렉토리 및 파일들을 볼 수 있다. 
  ![image](https://user-images.githubusercontent.com/69496570/135148849-d89abfb5-7eda-4f67-869f-85298b9156cd.png)
  
+### 2. posts 디렉토리의 각 파일에 `categories`라는 변수를 생성해준다. 
+![image](https://user-images.githubusercontent.com/69496570/135767617-96671a44-7aaa-4f37-ae92-8a3909efccc4.png)31ca1a7abb4f.png)
+위의 파일은 일주일동안 있었던 일들과 감정, 생각을 담은 글이기 때문에 categories를 diary로 생성한다. 여기서 주의할 점은 categories라는 변수를 생성해준 다음, 위의 그림처럼 리스트형태로 카테고리 유형을 나열해야한다는 것이다. 그리고 posts 디렉토리에 있는 다른 파일들에도 `cateogories`라는 변수를 추가해준다.
+
 ### 2. 여기에서 `_layouts`디렉토리에 들어간 후 `home.html`를 수정한다.
 
 처음 이 html파일의 코드를 보면 아마 이런 식으로 되어있을 것이다.
