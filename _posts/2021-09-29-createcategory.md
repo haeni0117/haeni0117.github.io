@@ -51,8 +51,22 @@ last_modified_at: 2021-09-27T08:06:00-05:00
 아까 봤던 `site.categories`라는 변수는 우리가 불러올 것들 그 자체이기 때문에 이 리스트를 다른 변수안에 넣어준다. 이 리스트를 넣어줄 변수명은 `category`라고 하자. 
 이 부분에 관련된 코드는 다른 언어와 비슷하니 따라하는 데에 크게 무리가 없으리라고 생각된다.
 ![image](https://user-images.githubusercontent.com/69496570/135768515-38771983-96e5-4d83-a7ba-a6730ccf2ca0.png)
+
 결국 요약하자면 리스트에 있는 내용(`site.categories`)들을 `category`라는 변수(A in B)에 넣으면서 순환(for문)하게 되는 것이다.
 그리고 카테고리라는 변수를 출력해보자.
+![image](https://user-images.githubusercontent.com/69496570/135768915-02a03e79-77e6-4f3c-a4e4-e3b17a49d11b.png)
+![image](https://user-images.githubusercontent.com/69496570/135769149-6c074a09-312a-4918-8a6c-d14847368084.png)
+우리가 만드려고 했던 방향과는 상당히 어긋난 모습을 볼 수 있다. 우리가 출력하고자 하는 카테고리의 유형이 출력되는 것이 아니라 이런 식으로 홈이 바뀐 이유는 뭘까?
+
+정확하지는 않지만, 이 강의를 업로드한 유튜버에 의하면 category라는 변수가 단순한 변수가 아닌 하나의 구조이기 때문이고, 우리가 원하는 것은 category라는 변수 그 자체가 아니라 category변수 중 first라는 영역이기 때문이라고 했다.
+- category의 first : category의 이름이 출력된다.
+- category의 last : post의 내용이 출력된다. -> 카테고리와 연관된 포스트들에 대한 내용이다. 
+  - 따라서 나중에 카테고리별 상세페이지를 만들 때(ex. C++에 관련된 포스트만 모여있는 상세페이지 만들기 etc...)
+  - 위 내용을 활용하면, 사용자들에게 해당 카테고리에 몇 개의 포스팅이 존재하는지에 대한 정보를 괄호를 통해 알려줄 수 있다.
+  - ![image](https://user-images.githubusercontent.com/69496570/135769404-e436130e-2c9a-41d8-85dc-ece6b419a3a3.png)
+  - 위의 코드를 적용한 웹페이지는 아래와 같다.
+  - ![image](https://user-images.githubusercontent.com/69496570/135769512-c74cc557-4ed1-4c00-9a5b-d8fb78c28ecc.png)
+
 
 
 
