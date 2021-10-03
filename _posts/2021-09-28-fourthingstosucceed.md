@@ -1,7 +1,7 @@
 ---
 title: "곽정은의 사생활 : 성공하고 싶으세요? 이 네가지 습관부터 버리세요"
 excerpt: "위 영상을 시청한 후 내용정리 및 느낀점을 정리했다."
-layout : post
+- layout : post
 - categories: Youtube
 - tags: Blog
 last_modified_at: 2021-09-28T08:06:00-05:00
