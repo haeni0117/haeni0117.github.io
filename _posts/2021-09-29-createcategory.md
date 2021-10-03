@@ -67,16 +67,12 @@ last_modified_at: 2021-09-27T08:06:00-05:00
   - 위의 코드를 적용한 웹페이지는 아래와 같다.
   - ![image](https://user-images.githubusercontent.com/69496570/135769512-c74cc557-4ed1-4c00-9a5b-d8fb78c28ecc.png)
 
+### 4. 본격적으로 리스트 형식으로 출력해주기
+- html에서 리스트를 출력할 때는 `<ul></ul>`이라는 태그를 사용한다. 
+- 그리고 그 안에는 `<li></li>`라는 태그를 사용한다.
+![image](https://user-images.githubusercontent.com/69496570/135769645-7d130a34-2600-4e67-b625-7d15e36c0f45.png)
+위의 코드를 적용시켜서 commit해주면, 한 줄에 하나씩 출력되게 된다.
 
 
-
-### 2. 여기에서 `_layouts`디렉토리에 들어간 후 `home.html`를 수정한다.
-
-처음 이 html파일의 코드를 보면 아마 이런 식으로 되어있을 것이다.
-![image](https://user-images.githubusercontent.com/69496570/135149214-f6d80a95-9a02-4761-81f1-13f71a274af1.png)
-![image](https://user-images.githubusercontent.com/69496570/135149848-d993272f-a396-43ad-abf0-5d12f7baf568.png)
-
-블록처리된 위의 코드를 `home.html`에 추가하면 아무것도 없었던 내 깃허브블로그의 Recent Post 아래에 'docker', 'blog'와 같이 카테고리들이 생긴다.
-![image](https://user-images.githubusercontent.com/69496570/135150109-e5f61a53-8cac-4da5-a205-ebd93488bf53.png)
 
   
