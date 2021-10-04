@@ -79,6 +79,7 @@ ECC 이삼봉홀에 가니까 오랜만에 보는 우리과 집행부 친구들�
 다행히 금고입금을 완료했다. 그리고 오늘은 새벽 2시쯤에 칼로 비닐을 까야하는 것 외에는 정리도 끝마쳤다. 
 새벽 두 시쯤에 한 손님이 닭다리같은 걸 사가셨는데, 반품하면서 2000원은 나보고 커피사먹으라고 주셨다. 돈을 받아서 기쁘다기보다는, 이런 소소한 호의들이 오가는 게 좋다. 되게 오랜만에 경험하는 일이랄까?
 ![image](https://user-images.githubusercontent.com/69496570/135832160-e438d557-cf9b-49d3-88d2-ccc166f1490d.png)
+![image](https://user-images.githubusercontent.com/69496570/135832308-37e25650-a16d-4f68-b7e4-b30073af4712.png)
 
 4시쯤에 손님 두 분이 오셨는데, 유통기한이 지난 김밥을 구매하려고 하셨다. 폐기 빼는 것을 깜빡하고 잊은 것이다. 손님께 죄송하다고 말씀드리고 손님이 가신 다음에 얼론 폐기를 찍었다. 
 오늘은 폐기 도시락이 나올까 궁금했는데, 햄도시락이 하나 나왔다. 
@@ -90,12 +91,12 @@ ECC 이삼봉홀에 가니까 오랜만에 보는 우리과 집행부 친구들�
 ![image](https://user-images.githubusercontent.com/69496570/135832268-4d3ec886-d49f-4305-a045-30a3c8116913.png)
 
 광화문에 가려고 버스를 기다리고 있는데 저 가게가 눈에 들어왔다. 1학년 때 유닛메이트랑 가봤었는데, 맛이 기억나기보다는 추억이 기억난다.
-![image](https://user-images.githubusercontent.com/69496570/135832308-37e25650-a16d-4f68-b7e4-b30073af4712.png)
+![image](https://user-images.githubusercontent.com/69496570/135832344-c302f256-8af7-435d-ba89-68e545959904.png)
 
 나는 가을만 되면 이하우스에서 살던 시절이 생각이 난다.
 
 광화문 교보문고 도착. permission to dance 현수막은 아직도 걸려있었다. 원래는 8시 30분에 오픈이었는데, 9시 반으로 바뀌어서 계단에 앉아서 유튜브 보면서 기다렸다.
-![image](https://user-images.githubusercontent.com/69496570/135832344-c302f256-8af7-435d-ba89-68e545959904.png)
+
 ![image](https://user-images.githubusercontent.com/69496570/135832400-03223b30-ed32-407a-8e93-49350d466174.png)
 ![image](https://user-images.githubusercontent.com/69496570/135832435-d684ebbd-f920-4f0e-ba00-50a4b697a6c1.png)
 
