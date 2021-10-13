@@ -71,8 +71,26 @@ last_modified_at: 2021-09-27T08:06:00-05:00
 - html에서 리스트를 출력할 때는 `<ul></ul>`이라는 태그를 사용한다. 
 - 그리고 그 안에는 `<li></li>`라는 태그를 사용한다.
 ![image](https://user-images.githubusercontent.com/69496570/135769645-7d130a34-2600-4e67-b625-7d15e36c0f45.png)
-위의 코드를 적용시켜서 commit해주면, 한 줄에 하나씩 출력되게 된다.
+위의 코드를 적용시켜서 commit해주면, 한 줄에 하나씩 출력되게 된다. 아래는 적용된 웹페이지이다. 아까보다 훨씬 보기 편해졌다.
+![image](https://user-images.githubusercontent.com/69496570/135769734-8c7c3d7b-26ca-40ea-a57e-420b1753202a.png)
 
+### 5. 카테고리 클릭 시 관련 상세페이지로 넘어가는 기능 구현하기
+우리가 일반적인 블로깅 플랫폼에서는 카테고리를 클릭하면, 그에 관련된 상세페이지로 넘어간다. 티스토리에서도 그렇고, 네이버 블로그에서도 그러하다.
+공통적으로 플랫폼들에 구현된 기능인만큼 사용자에게 편리한, 보기좋은 블로그를 만들기 위해서 필수적인 요소이다.
 
+- asset폴더 안에 category라는 이름을 가진 폴더를 생성해주고, 카테고리 마크다운 파일을 생성해준다.
+  ![image](https://user-images.githubusercontent.com/69496570/135769956-b7b16de3-2622-4bb4-aaac-e9b367d7e85c.png)
+  - 이 과정을 통해 사용자가 category와 blog,diary와 같은 세부 카테고리에 url을 통해 접근이 가능하게 된다.
+- category 내부파일명은 만들어주고 싶은 카테고리 목록으로 하면 된다.
+- 각 파일 내부에는 아래와 같은 코드를 작성해준다.
+  - ![image](https://user-images.githubusercontent.com/69496570/135770514-34e07488-b031-46ba-b12d-ab580ca389a9.png)
+- `_layouts` 디렉토리에 `category.html`을 생성해준다. 
+   카테고리에 관한 내용만을 다룰 것이지만, 기본 구조는 home페이지와 같이 때문에 `home.html`의 코드를 복붙해준다. - 홈테마 복사
+  - ![image](https://user-images.githubusercontent.com/69496570/135770627-35cf4d1a-84e1-426f-84ad-28c19209b825.png)
+  - 수정해줘야 할 부분은 어떤 것을 출력할지에 대한 부분이다.
+  - 
+- 나머지 카테고리에 대한 파일도 생성해준다.
+  - ![image](https://user-images.githubusercontent.com/69496570/135770873-25c9cbd4-9993-4b46-b103-048ca8a8d95c.png)
+  
 
   
