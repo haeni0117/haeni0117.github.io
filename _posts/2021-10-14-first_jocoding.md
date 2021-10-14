@@ -46,10 +46,21 @@ Teachable Machine은 구글에서 2019년 출시한 서비스로, 머신러닝 �
 
 - 텐서플로(tensorflow)란?
 
-  - 텐서플로(TensorFlow)는 구글(Google)에서 만든, 딥러닝 프로그램을 쉽게 구현할 수 있도록 다양한 기능을 제공해주는 라이브러리다.
-  - 텐서플로 자체는 기본적으로 C++로 구현 되어 있으며, 아래의 그림과 같이 Python, Java, Go 등 다양한 언어를 지원한다. <ul>하지만, 파이썬을 최우선으로 지원하며 대부분의 편한 기능들이 파이썬 라이브러리로만 구현되어 있어 Python에서 개발하는 것이 편하다.</ul>
+  - <mark>텐서플로(TensorFlow)는 구글(Google)에서 만든, 딥러닝 프로그램을 쉽게 구현할 수 있도록 다양한 기능을 제공해주는 라이브러리</mark>다.
+  - 머신러닝에 대해 자세히 알지 못해도 이 라이브러리를 사용하면 쉽게 프로그램에 적용시키는 것이 가능해진다.
+  - 텐서플로 자체는 기본적으로 C++로 구현 되어 있으며, 아래의 그림과 같이 Python, Java, Go 등 다양한 언어를 지원한다. 하지만, 파이썬을 최우선으로 지원하며 대부분의 편한 기능들이 파이썬 라이브러리로만 구현되어 있어 Python에서 개발하는 것이 편하다.
+  - [TensorFlow 공식 사이트](https://www.tensorflow.org/?hl=ko)
 
-- [TensorFlow](https://www.tensorflow.org/?hl=ko)
+## 모델 다운로드
+
+- 모델은 tesorflow,tensorflow.lite,tensorflow.js로 가져갈 수 있다.
+  ![image](https://user-images.githubusercontent.com/69496570/137291033-407a316e-8507-419f-a6e1-ab913f2ba67e.png)
+- 다운로드받은 파일을 압축풀기를 한다. 그러면 아래와 같은 3개의 파일이 있다. - 우리가 처음 학습시킬 때 웹캠으로 찍은 이미지를 정말 많이 사용해서 용량이 크지 않을까?리는 생각을 할 수도 있지만, 샘플은 저장되지 않고 샘플을 기반으로 학습한 모델만 export되기 때문에 용량은 그렇게 크지 않다.
+  ![image](https://user-images.githubusercontent.com/69496570/137291239-24d80462-bc0f-4e7c-98b3-b37719415e42.png)
+
+## 머신러닝을 사용해서 웹서비스 만들기
+
+- 해당 폴더에 `index.html`이라는 파일을 생성시킨다. 나는 여기에서부터 Vscode를 사용하여 편집했다.
 
 ---
 
