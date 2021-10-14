@@ -1,5 +1,5 @@
 ---
-title: "Teachable Machine으로 AI 과일도감 제작하기 - 1"
+title: "Teachable Machine으로 마스크 썼는지 판별하는 웹사이트 만들기"
 categories:
   - Tech_Trend
 tags:
@@ -80,8 +80,48 @@ Teachable Machine은 구글에서 2019년 출시한 서비스로, 머신러닝 �
 - ![image](https://user-images.githubusercontent.com/69496570/137301727-387eb0ff-3ace-475e-ba1c-79fe10c164c2.png)
 - 위의 페이지에서 해당 폴더를 드래그앤드롭해주는 것만으로 웹페이지를 개설할 수 있다.
 - ![image](https://user-images.githubusercontent.com/69496570/137299249-c28fbe27-0701-4604-81a4-b0746aeef4b3.png)
-![image](https://user-images.githubusercontent.com/69496570/137299649-9b265a47-6f70-4ca6-9eea-e5a8102a7736.png)
+- ![image](https://user-images.githubusercontent.com/69496570/137299649-9b265a47-6f70-4ca6-9eea-e5a8102a7736.png)
 - 지금 내가 마스크를 쓰고 웹캠을 켰는데 mask라고 정확하게 인식하는 걸 보니 잘 돌아가고 있음을 알 수 있다.
+
+## HTML/CSS로 꾸며주기
+- 포켓몬도감처럼 꾸며보자.
+- ![image](https://user-images.githubusercontent.com/69496570/137302956-088b18d4-de65-4088-b2fa-b02add13a833.png)
+```
+async function predict() {
+        // predict can take in an image, video or canvas html element
+        const prediction = await model.predict(webcam.canvas);
+        if (
+          prediction[0].className == "MASK" &&
+          prediction[0].probability.toFixed(2) > 0.9
+        ) {
+          labelContainer.childNodes[0].innerHTML = "마스크 착용중";
+        } else if (
+          prediction[0].className == "NOMASK" &&
+          prediction[0].probability.toFixed(2) > 0.9
+        ) {
+          labelContainer.childNodes[0].innerHTML =
+            "마스크를 착용하지 않으면 출입이 불가능합니다ㅠㅠ";
+        } else {
+          labelContainer.childNodes[0].innerHTML = "알 수 없음";
+        }
+        // for (let i = 0; i < maxPredictions; i++) {
+        //   const classPrediction =
+        //     prediction[i].className +
+        //     ": " +
+        //     prediction[i].probability.toFixed(2);
+        //   labelContainer.childNodes[i].innerHTML = classPrediction;
+        // }
+      }
+```
+- deploy창에서 수정사항을 반영해준다.
+
+## 마지막테스트
+<img width="1022" alt="스크린샷 2021-10-14 오후 7 48 40" src="https://user-images.githubusercontent.com/69496570/137303816-f0ff044b-e5a9-4488-8e28-569ad753243d.png">
+<img width="217" alt="스크린샷 2021-10-14 오후 7 49 42" src="https://user-images.githubusercontent.com/69496570/137303834-ea3a98b7-1bcc-4b59-b2ad-e84bdc896afe.png">
+- feedback
+  - 왜 nomask는 텍스트가 안뜨는지 확인해봐야할 것 같다.
+  - html/css를 더 정비해야겠다.
+  - class를 늘려서 인공지능 과일도감을 만들어봐야지~
 ---
 
 ## 참고자료
