@@ -118,17 +118,20 @@ async function predict() {
 ## 마지막테스트
 <img width="1022" alt="스크린샷 2021-10-14 오후 7 48 40" src="https://user-images.githubusercontent.com/69496570/137303816-f0ff044b-e5a9-4488-8e28-569ad753243d.png">
 <img width="217" alt="스크린샷 2021-10-14 오후 7 49 42" src="https://user-images.githubusercontent.com/69496570/137303834-ea3a98b7-1bcc-4b59-b2ad-e84bdc896afe.png">
+<img width="219" alt="스크린샷 2021-10-14 오후 7 49 49" src="https://user-images.githubusercontent.com/69496570/137304228-4869bca9-e7ca-4006-993c-70888611c8a3.png">
+
 - feedback
   - 왜 nomask는 텍스트가 안뜨는지 확인해봐야할 것 같다.
   - html/css를 더 정비해야겠다.
   - class를 늘려서 인공지능 과일도감을 만들어봐야지~
----
+  
+-----
 
 ## 참고자료
 
 - 조코딩님 유튜브
   - [세상에서 가장 쉬운 인공지능 만들기 1탄 | Teachable Machine으로 AI 과일도감 제작하기](http://img.youtube.com/vi/USQGTW34lO8&list=PLU9-uwewPMe1AsOwlodmuaap99KH_483a/0.jpg)
     ![image](https://user-images.githubusercontent.com/69496570/137283016-62f3f002-38e5-4be7-8806-83d691d23dff.png)
-- [구글에서 발행한 teachable machine 서비스 공식문서](https://teachablemachine.withgoogle.com/train)
+- [구글에서 발행한 teachable machine 서비스 사이트s](https://teachablemachine.withgoogle.com/train)
 - 이런식으로 딥러닝기반 마스크 출입통제 알고리즘같은 게 만들어지는구나 싶었다.
 - 마스크 인식 서비스들을 구글링하니 아래와 같은 플젝을 한 사람을 찾았다. 2학년이라는데, 나도 2학년이니까 열심히 세상에 의미있는 것들을 만들어봐야지.
