@@ -1,5 +1,5 @@
 ---
-title: "메타버스(Metaverse)"
+title: "메타버스(Metaverse)와 가상사무실 게더타운(gathertown)"
 categories:
   - Tech_Trend
 tags:
