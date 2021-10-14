@@ -32,12 +32,24 @@ Teachable Machine은 구글에서 2019년 출시한 서비스로, 머신러닝 �
 - 지금 사과를 학습시키고 있는 중인데, 여러각도에서 본 사과데이터를 입력하여(200장 정도의 이미지) 사과를 인공지능한테 가르쳤다.
   ![image](https://user-images.githubusercontent.com/69496570/137285549-64709fe3-f9be-4e9f-aa78-f722f3e2ecad.png)
 - 나는 처음에 지금 가지고 있는 무선마우스와 스마트폰을 이용해서 학습을 진행했는데, 색깔과 모양도 다 다르고 의미없는 일을 하는 것 같아서 샘플을 다 지우고 주제를 바꿨다.
+
+## 테스트
+
 - mask class와 nomask class에 웹캠을 통해 이미지를 샘플링했더니 아까 보다 훨씬 정확하게 이미지 판별을 했다.
   <img width="1440" alt="스크린샷 2021-10-14 오후 6 11 27" src="https://user-images.githubusercontent.com/69496570/137288121-5ca744a9-43fb-45cf-8b51-dedab9564ec8.png">
   <img width="1430" alt="스크린샷 2021-10-14 오후 6 11 43" src="https://user-images.githubusercontent.com/69496570/137288147-a57fdbfa-a93d-4903-acc5-ab8350d599c8.png">
   <img width="1440" alt="스크린샷 2021-10-14 오후 6 11 51" src="https://user-images.githubusercontent.com/69496570/137288159-5b5b2660-66a8-40d6-9cd3-c94ae67da10b.png">
-- 이런식으로 딥러닝기반 마스크 출입통제 알고리즘같은 게 만들어지는구나 싶었다.
-- 마스크 인식 서비스들을 구글링하니 아래와 같은 플젝을 한 사람을 찾았다. 2학년이라는데, 나도 2학년이니까 열심히 세상에 의미있는 것들을 만들어봐야지.
+
+## 모델추출(Export)
+
+![image](https://user-images.githubusercontent.com/69496570/137289492-93b6dd7d-7531-4f8c-9805-e0676c6d4618.png)
+
+- 텐서플로(tensorflow)란?
+
+  - 텐서플로(TensorFlow)는 구글(Google)에서 만든, 딥러닝 프로그램을 쉽게 구현할 수 있도록 다양한 기능을 제공해주는 라이브러리다.
+  - 텐서플로 자체는 기본적으로 C++로 구현 되어 있으며, 아래의 그림과 같이 Python, Java, Go 등 다양한 언어를 지원한다. <ul>하지만, 파이썬을 최우선으로 지원하며 대부분의 편한 기능들이 파이썬 라이브러리로만 구현되어 있어 Python에서 개발하는 것이 편하다.</ul>
+
+- [TensorFlow](https://www.tensorflow.org/?hl=ko)
 
 ---
 
@@ -47,3 +59,5 @@ Teachable Machine은 구글에서 2019년 출시한 서비스로, 머신러닝 �
   - [세상에서 가장 쉬운 인공지능 만들기 1탄 | Teachable Machine으로 AI 과일도감 제작하기](http://img.youtube.com/vi/USQGTW34lO8&list=PLU9-uwewPMe1AsOwlodmuaap99KH_483a/0.jpg)
     ![image](https://user-images.githubusercontent.com/69496570/137283016-62f3f002-38e5-4be7-8806-83d691d23dff.png)
 - [구글에서 발행한 teachable machine 서비스 공식문서](https://teachablemachine.withgoogle.com/train)
+- 이런식으로 딥러닝기반 마스크 출입통제 알고리즘같은 게 만들어지는구나 싶었다.
+- 마스크 인식 서비스들을 구글링하니 아래와 같은 플젝을 한 사람을 찾았다. 2학년이라는데, 나도 2학년이니까 열심히 세상에 의미있는 것들을 만들어봐야지.
