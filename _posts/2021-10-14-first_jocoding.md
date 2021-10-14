@@ -15,6 +15,23 @@ last_modified_at: 2021-10-14T08:06:00-05:00
 
 Teachable Machine은 구글에서 2019년 출시한 서비스로, 머신러닝 모델의 학습 과정을 쉽게 이해하고 직접 모델을 생성해 활용할 수 있다. <span style="color:purple">코딩을 할 줄 몰라도, 수학을 잘하지 못해도 쉽게 활용할 수 있는 것이 가장 큰 특징이다.</span> 학습에만 머물지 않고, 프로젝트에서 생성한 학습 모델을 다양한 방법과 용도로 활용하는 것도 가능하다.
 
+## Teachable Machine 사이트 접속
+
+따로 회원가입이 필요하지는 않다. 아래 참고자료에 teachablemachine공식문서 링크를 클릭하면 이동할 수 있다. 들어가면 아래와 같은 화면을 볼 수 있다.
+
+![image](https://user-images.githubusercontent.com/69496570/137283833-f94662d3-0ed3-4b0f-81d4-b8db48c6539d.png)
+
+- 이미지프로젝트, 오디오프로젝트, 포즈프로젝트가 있다. 이번 플젝에서는 이미지 프로젝트를 사용할 것이다. 근데 개인저긍로는 저 포즈프로젝트가 되게 흥미로워보인다. 기본적으로 머신러닝(machine learning)기반이다. 머신러닝이라고 하면 이름부터 어렵다고 거부감을 느끼는 사람들이 많을텐데, ui도 되게 심플하고 user-friendly하다고 느꼈다.
+- 이미지 프로젝트를 클릭하면 다음과 같은 화면이 나온다. 웹캠, 또는 직접 이미지 업로드를 통해서 인공지능을 학습시킬 수 있다.
+  ![image](https://user-images.githubusercontent.com/69496570/137284717-68fbe616-093b-415a-a8e3-17fea3c9b5a1.png)
+
+## 이미지 학습시키기
+
+- 조코딩님은 웹캠을 통해서 토마토와 사과를 구별하는 학습을 진행했다. 얼핏보면 둘 다 비슷한 사이즈인데다 색깔도 붉은색이라서 과연 인공지능이 이걸 구분할 수 있을지 엄청 궁금했다.
+
+- 지금 사과를 학습시키고 있는 중인데, 여러각도에서 본 사과데이터를 입력하여(200장 정도의 이미지) 사과를 인공지능한테 가르쳤다.
+  ![image](https://user-images.githubusercontent.com/69496570/137285549-64709fe3-f9be-4e9f-aa78-f722f3e2ecad.png)
+
 - 참고자료
   - 조코딩님 유튜브
     - [세상에서 가장 쉬운 인공지능 만들기 1탄 | Teachable Machine으로 AI 과일도감 제작하기](http://img.youtube.com/vi/USQGTW34lO8&list=PLU9-uwewPMe1AsOwlodmuaap99KH_483a/0.jpg)
