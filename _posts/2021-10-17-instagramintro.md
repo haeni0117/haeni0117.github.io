@@ -11,7 +11,7 @@ last_modified_at: 2021-10-17T08:06:00-05:00
 
 ## 수업설명
 
-- 수업목표 : 인스태그램 그대로 구현 -> html,css는 뼈대구성만 있으면 간단하게 할 수 있다.
+- 수업목표 : 인스타그램 그대로 구현 -> html,css는 뼈대구성만 있으면 간단하게 할 수 있다.
 - Editor : webstorm(유료), phpstrom 사용
   - 본인이 사용하고 싶은 에디터써도 OK -> 난 VScode 사용할 것이다.
 
@@ -108,3 +108,110 @@ last_modified_at: 2021-10-17T08:06:00-05:00
   - `auto` : 가로 중앙에 배치한다는 뜻이다. 따라서 `좌여백 = 우여백`
   - 그리고 위의 코드가 적용되지 않는 예외상황들이 존재한다.
     - [그 예외상황들에 대해 알고싶다면?](https://hansolcha.tistory.com/4)
+
+## inner요소들(로고,검색창,아이템창) css 구현
+
+### 1. 로고(instagram 로고)
+
+- 유저가 어느페이지에서 무얼하고 있든 로고를 클릭하면 원래 페이지로 돌아온다.
+  - 예시 : 친구랑 DM중 -> 인스타그램 로고 클릭 -> www.instagram.com 접속
+  - 우리는 유저가 인스타그램 로고를 클릭하면 index.html을 다시 불러와야 한다. -> 로고에 `index.html`를 링크해야한다. -> `a`태그 사용
+- HTML
+
+```
+<h1 class = "logo">
+  <a href = "index.html">
+  </a></h1>
+```
+
+- 아이콘 넣기
+  - 이미지를 통해서 넣기
+  - background를 통해 이미지 배치시키기
+    - spritecow에서 가져와서 쓴다.
+    - spritecow 웹사이트 : [http://www.spritecow.com/](http://www.spritecow.com/)
+
+```
+.sprite_user_icon_outline{
+  display:inline-block;
+  background:url('../imgs/dfghjk.png') no-repeat -277px -182px;
+  width:22px;
+  height:24px;
+}
+```
+
+- `display : inline-block` : `display`는 `inline`속성이 있고, `block`속성이 있다. `inline-block`은 `inline`과 `block`의 성질을 모두 가지고 있는 속성이다.
+  - 해당 사이트에서 CSS의 display속성에 대해 잘 설명해놓았다. -> [https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1](https://ofcourse.kr/css-course/display-%EC%86%8D%EC%84%B1)
+- block
+  - div 태그, p 태그, h 태그#, li 태그 등이 block에 해당된다.
+  - 기본적으로 가로 영역을 모두 채우며, block 요소 다음에 등장하는 태그는 줄바꿈이 된 것처럼 보인다.
+  - width, height 속성을 지정 할 수 있으며, block 요소 뒤에 등장하는 태그가 그 이전 block 요소에 오른쪽에 배치될 수 있어도 항상 다음 줄에 렌더링된다.
+
+```
+<style>
+.block1{ width: 300px; border: 3px solid #333 }
+.block2{ width: 200px; border: 3px solid #999 }
+</style>
+
+<div class="block1">1</div>
+<div class="block2">2</div>
+hello
+```
+
+- inline
+  - 줄바꿈, width와 height 지정 불가능
+  - 문서편집에서 볼드, 이탤릭, 색상, 밑줄 등 텍스트에 효과를 주기 위해 존재하는 단위라고 할 수 있다. -> 이런 효과를 더해준다고해서 줄바꿈이 일어나는 것이 아니기 때문이다.
+
+```
+<style>
+.inline1{
+	background: #09c;
+}
+.inline2{
+	width: 200px; /* 이 값은 무시됩니다 */
+	border: 3px solid #999;
+}
+</style>
+
+<p>
+	Lorem ipsum dolor sit amet, <span class="inline1">consectetur adipiscing elit</span>,
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	Duis aute irure dolor in <span class="inline2">reprehenderit</span>
+	in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+	Excepteur sint occaecat cupidatat non proident,
+	sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+```
+
+- inline-block
+  - inline과 block의 중간속성이다.
+  - 줄 바꿈이 되지 않지만 크기를 지정 할 수 있다.
+    - 줄 바꿈 불가능 -> inline의 속성
+    - 크기지정(width,height)가능 -> block의 속성
+
+```
+<style>
+.inline-block1{
+	display: inline-block;
+	background: #09c;
+	height: 45px;
+	/* 원래 inline 요소의 높이는 글자(폰트)의 높이를 바탕으로 설정되지만,
+	inline-block을 이용하면 임의로 높이 또한 설정을 할 수 있습니다. */
+}
+.inline-block2{
+	display: inline-block;
+	width: 200px; /* 이 값은 이제 정상 작동합니다 */
+	border: 3px solid #999;
+}
+</style>
+
+<p>
+	Lorem ipsum dolor sit amet, <span class="inline-block1">consectetur adipiscing elit</span>,
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	Duis aute irure dolor in <span class="inline-block2">reprehenderit</span>
+	in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+	Excepteur sint occaecat cupidatat non proident,
+	sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+```
