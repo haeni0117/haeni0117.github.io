@@ -7,7 +7,7 @@ tags:
 last_modified_at: 2021-10-17T08:06:00-05:00
 ---
 
-# 인스타그램 클론코딩 - intro
+# intro
 
 ## 수업설명
 
@@ -47,3 +47,10 @@ last_modified_at: 2021-10-17T08:06:00-05:00
   ![image](https://user-images.githubusercontent.com/69496570/137624541-06ec73c9-bd75-47f9-8a93-7483e0eea348.png)
 - rightbox
   ![image](https://user-images.githubusercontent.com/69496570/137624548-56c3a5c1-921c-4ec7-a848-1cd19bf35289.png)
+
+# header
+
+- 코딩을 하기전에 body영역 안에 container영역을 만들어주는 것이 좋다.
+- 그리고 body태그는 되도록 건드리지 않는 것이 좋다. 무언가를 바꿔주고 싶다면 body태그 안에 태그들을 만들어서 변경하도록 하자.
+- semantic태그인 section태그를 사용해서 container 영역을 만들어주자.
+- head영역에 header영역을 만들어주는 게 아니다!!! 크게 3가지 영역으로 나눴던 모든 부분들은 모두 body영역에 구현해줄 것이다.
