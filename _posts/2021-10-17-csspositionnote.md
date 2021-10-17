@@ -7,9 +7,7 @@ tags:
 last_modified_at: 2021-10-17T08:06:00-05:00
 ---
 
-# position
-
-태그들의 위치를 결정하는 css이다.
+position : 태그들의 위치를 결정하는 css이다.
 
 ## static
 
