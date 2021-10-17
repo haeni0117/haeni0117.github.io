@@ -7,7 +7,7 @@ tags:
 last_modified_at: 2021-10-17T08:06:00-05:00
 ---
 
-# intro
+# 1강 - intro
 
 ## 수업설명
 
@@ -37,7 +37,11 @@ last_modified_at: 2021-10-17T08:06:00-05:00
 
 ### header
 
-![image](https://user-images.githubusercontent.com/69496570/137624415-afe2d3c9-a7c2-48a9-b515-4d426596a108.png) - header를 좀 더 자세히 보자. - inner : 모든 요소들을 감싸고 있는 inner가 존재한다. 그리고 inner는 다시 3가지 요소로 구분된다. 1. logo : 인스타그램 로고 2. 검색창 3. 아이콘창
+![image](https://user-images.githubusercontent.com/69496570/137624415-afe2d3c9-a7c2-48a9-b515-4d426596a108.png) - header를 좀 더 자세히 보자. - inner : 모든 요소들을 감싸고 있는 inner가 존재한다. 그리고 inner는 다시 3가지 요소로 구분된다.
+
+1. logo : 인스타그램 로고
+2. 검색창
+3. 아이콘창
 
 ### container
 
@@ -48,9 +52,38 @@ last_modified_at: 2021-10-17T08:06:00-05:00
 - rightbox
   ![image](https://user-images.githubusercontent.com/69496570/137624548-56c3a5c1-921c-4ec7-a848-1cd19bf35289.png)
 
-# header
+---
+
+# 2강 - header
 
 - 코딩을 하기전에 body영역 안에 container영역을 만들어주는 것이 좋다.
 - 그리고 body태그는 되도록 건드리지 않는 것이 좋다. 무언가를 바꿔주고 싶다면 body태그 안에 태그들을 만들어서 변경하도록 하자.
 - semantic태그인 section태그를 사용해서 container 영역을 만들어주자.
 - head영역에 header영역을 만들어주는 게 아니다!!! 크게 3가지 영역으로 나눴던 모든 부분들은 모두 body영역에 구현해줄 것이다.
+- 결국 `body -> container -> header -> inner` 로 계층이 구성된다.
+
+## header css 구현
+
+- 강의에서 position을 absolute로 설정하면 x,y를 둘 중 하나는 설정해줘야한다고 했는데 x : right or left / y: top or bottom 으로 설정해라는 의미인 것 같다.
+
+```
+#header{
+  width : 100%;
+  position : absolute;
+  left : 0;
+  top : 0;
+  z-index : 999;
+  background : white;
+  border-bottom : 1px solid rgba(0,0,0,0.1);
+}
+```
+
+- `width : 100%` : 가로폭을 풀로 채운다.
+- `position : absolute` : 포지션(position)의 성질을 absolute로 설정한다.
+  - 내 블로그에 CSS position에 대해 정리한 문서 있다.
+- `left`,`top` : absolute 포지션 세부사항 설정
+  - `absolute`자체는 '어떤 걸 조상(기준)으로 둘 지'이므로 얼마나/어떻게 이동하냐에 관한내용은 top/bottom/right/left를 통해서 설정한다.
+  - 어떻게 : `top,bottom,right,left`
+  - 얼마나 : ( )px
+- `border-bottom` : 밑에 경계선을 하나 만든다. 그리고 경계선의 성질은 solid -> 단선이다.
+- `rgba` : `rgb`는 색상코드에서 쓰는 그 RGB가 맞고 a는 투명도에 관한 값이다.
