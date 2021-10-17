@@ -26,16 +26,19 @@ last_modified_at: 2021-10-16T08:06:00-05:00
 
 ## 분해창
 ![도구창 (분해)_1@4x](https://user-images.githubusercontent.com/69496570/137615860-ec1ffe45-27ac-4e5f-b19a-54511fa47259.png)
-- 분해창 UX flow chart 
+
+
+
+## 합성창
+![도구창 (합성)_1@4x](https://user-images.githubusercontent.com/69496570/137615861-6436d448-3983-443a-83de-f1eefe7bc11e.png)
+- 합성창은 <mark>아이템 합성</mark>에 관한 기능을 수행한다. 합성창이니 아이템합성에 관한 기능을 수행하는 것은 당연한 이야기이지만, 어떤 메커니즘으로 아이템이 합성되는지에 대해 설명하도록 하겠다.
+- 합성창에 있는 아이템 2개를 사용(합성)해서 새로운 아이템을 얻을 수 있다. 이 이벤트는 도구창과 다르게 사용자가 합성하고 싶을 때 언제든지 합성할 수 있다.
+- 대부분(85%이상) 합성을 하고 나면 합성에 사용된 아이템들을 모든 인벤토리 창에서 사라진다. 하지만 여러개를 한꺼번에 얻어서 인벤토리에 보관하고 있는 경우도 있기 때문에 사라지지 않을 수도 있다.(amount !=0) 
+- 그러나 따로 amount에 대한 정보는 유저에게 제공되지 않는다.
+- 합성창 UX flow chart 
   - <img width="1144" alt="스크린샷 2021-10-17 오후 4 42 22" src="https://user-images.githubusercontent.com/69496570/137617101-ceded985-0de4-4565-805c-286d7b72a282.png">
   - <img width="1147" alt="스크린샷 2021-10-17 오후 4 42 29" src="https://user-images.githubusercontent.com/69496570/137617102-a5f67abc-a5ee-4607-aac6-6df783cb3397.png">
   - <img width="1146" alt="스크린샷 2021-10-17 오후 4 42 40" src="https://user-images.githubusercontent.com/69496570/137617104-c43a1a94-a835-4518-a911-54c35ba15aeb.png">
   - <img width="1145" alt="스크린샷 2021-10-17 오후 4 42 48" src="https://user-images.githubusercontent.com/69496570/137617105-112d7e48-fa51-4ce3-a831-6ac9e415f1bd.png">
   - <img width="1144" alt="스크린샷 2021-10-17 오후 4 43 04" src="https://user-images.githubusercontent.com/69496570/137617107-773fe113-7b91-4068-82f1-3ddca5947223.png">
   - <img width="1146" alt="스크린샷 2021-10-17 오후 4 43 13" src="https://user-images.githubusercontent.com/69496570/137617108-9cd320d3-5fd0-496c-b083-6924164f7a0d.png">
-
-
-## 합성창
-![도구창 (합성)_1@4x](https://user-images.githubusercontent.com/69496570/137615861-6436d448-3983-443a-83de-f1eefe7bc11e.png)
-
-- 합성창은 <mark>아이템 합성</mark>에 관한 기능을 수행한다. 합성창이니 아이템합성에 관한 기능을 수행하는 것은 당연한 이야기이지만, 어떤 메커니즘으로 아이템이 합성되는지에 대해 설명하도록 하겠다.
