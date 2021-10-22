@@ -22,3 +22,12 @@ last_modified_at: 2021-10-01T08:06:00-05:00
 - Unity, gameengine 관련 영상시청 후 블로그정리
 - 인프런강의시청 - 인스타그램 클론코딩(fullstack 웹개발)
   ![image](https://user-images.githubusercontent.com/69496570/137623576-56f87da8-e2ce-49e2-8e04-be67f01eb70f.png)
+
+## 2021년 10월 18일~20일
+
+- 정신차려!!!!
+
+## 2021년 10월 23일 토요일
+
+- unity ) 베르의 게임 개발 유튜브 : 어몽어스(amongus)만들기
+-
