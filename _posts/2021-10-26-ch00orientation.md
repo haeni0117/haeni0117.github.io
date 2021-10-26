@@ -1,3 +1,11 @@
+---
+title: "Teachable Machine으로 마스크 썼는지 판별하는 웹사이트 만들기"
+categories:
+  - Unity
+tags:
+  - Battle Royal
+last_modified_at: 2021-10-26T08:06:00-05:00
+---
 #  배틀 로얄 제작을 위한 알고리즘과 프레임 워크 - 오리엔테이션
 - 8년 전에는 유니티로는 작은 수준의 모바일 게임밖에 만들지 못했음
 - 클라이언트 용량 한계 있었음 
