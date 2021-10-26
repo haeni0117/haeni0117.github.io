@@ -1,5 +1,5 @@
 ---
-title: "Teachable Machine으로 마스크 썼는지 판별하는 웹사이트 만들기"
+title: "배틀로얄 제작을 위한 알고리즘과 프레임워크 - 1"
 categories:
   - Unity
 tags:
