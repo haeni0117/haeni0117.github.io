@@ -72,12 +72,13 @@ RigidBody : 게임오브젝트를 물리엔진에서 제어하도록 하는 컴�
   - cf ) `LateUpdate()`, `Update()`
   - 출처 : [Update() , FixedUpdate() , LateUpdate() 의 차이점 by Developug](http://developug.blogspot.com/2014/09/update-fixedupdate-lateupdate.html)
 ![image](https://user-images.githubusercontent.com/69496570/139571271-e10c9f3d-566a-4bf3-a175-adfdbd5b61c3.png)
-- `#region`과 `#endregion`
+### `#region`과 `#endregion`
   - 목적성 
-     1) 서로 관련된 method, properties, fields 등등 그룹을 지을 수 있습니다. 
-     2) 긴 코드 블록들을 작은 블록으로 만들 수 있습니다. 개발자는 코드를 보고 싶을때 코드 왼쪽 편의 '+'를 선택하여 확대할 수 있고, 그곳에서의 작업이 끝났을 경우 '-'를 선택하여 닫아 두어 최대한 현재의 작업에만 집중할 수 있습니다. 
-  - ![image](https://user-images.githubusercontent.com/69496570/139571428-6e8d5a40-75fb-4863-aeab-1e1184424788.png)
-
-
-     2) 긴 코드 블록들을 작은 블록으로 만들 수 있습니다. 개발자는 코드를 보고 싶을때 코드 왼쪽 편의 '+'를 선택하여 확대할 수 있고, 그곳에서의 작업이 끝났을 경우 '-'를 선택하여 닫아 두어 최대한 현재의 작업에만 집중할 수 있습니다. 
+     - 1) 서로 관련된 method, properties, fields 등등 그룹을 지을 수 있습니다. 
+     - 2) 긴 코드 블록들을 작은 블록으로 만들 수 있습니다. 개발자는 코드를 보고 싶을때 코드 왼쪽 편의 '+'를 선택하여 확대할 수 있고, 그곳에서의 작업이 끝났을 경우 '-'를 선택하여 닫아 두어 최대한 현재의 작업에만 집중할 수 있습니다. 
+    - ![image](https://user-images.githubusercontent.com/69496570/139571428-6e8d5a40-75fb-4863-aeab-1e1184424788.png)
   - 출처: https://nsstbg.tistory.com/5 [All about it...]
+
+### moveposition()
+- Moves the kinematic Rigidbody towards position.
+- Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
