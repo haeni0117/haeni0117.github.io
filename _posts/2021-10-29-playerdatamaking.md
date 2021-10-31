@@ -129,4 +129,4 @@ public class Example : MonoBehaviour
 - <mark>rigidbody의 저항값을 로그함수화시켜서 점차적으로 느려지는 값으로 표현될 수 있게 dashVelocity값을 계산한 것</mark>
 - 예전에 타이포그래피할 때 미분가능한 구조로 그래프를 그렸던 것처럼 로그함수사용의 궁극적 목적은 정말 실제처럼 dash하게 보이기 위해서 사용하는 것
 - ![image](https://user-images.githubusercontent.com/69496570/139572610-247985d1-fb95-4561-8579-ff9723250e35.png) 
-- 딱 그냥 봐도 일반 직선그래프나 저차함수랑은 모션이 다를 것 같지 않나?
+- 딱 그냥 봐도 일반 직선그래프랑은 모션이 다를 것 같지 않나?
