@@ -161,9 +161,14 @@ public class Example : MonoBehaviour
 ## capsule은 땅에 있는가??
 ![image](https://user-images.githubusercontent.com/69496570/139573385-d9304d59-4ef6-4f00-9348-1c036f14403c.png)
 - 스크립트에서 위와 같은 변수를 생성한다. ~~LayerMask는 무슨 클래스인지 모르겠다. 오늘 처음 들어봤다.~~
-- `LayerMask` : 특정한 레이어(Layer)로 지정한 오브젝트만 카메라에 노출되도록 포함시키거나, 반대로 노출에서 제외되도록 컬링 마스크(Culling Mask)를 설정할 때 주로 사용한다. -> 특정 레이어에 대해서만 뭔가를 구현해주고 싶을 때 사용 = 오브젝트(object)의 선별적인 렌더링!
+- `LayerMask` : 특정한 레이어(Layer)로 지정한 오브젝트만 카메라에 노출되도록 포함시키거나, 반대로 노출에서 제외되도록 컬링 마스크(Culling Mask)를 설정할 때 주로 사용한다. -> 특정 레이어에 대해서만 뭔가를 구현해주고 싶을 때 사용 = <mark>오브젝트(object)의 선별적인 렌더링!</mark>
   - 렌더링(Rendering) : 렌더링 또는 이미지 합성(rendering 또는 image synthesis)은 컴퓨터 프로그램을 사용하여 모델 또는 이들을 모아놓은 장면인 씬 파일(scene file)로부터 영상을 만들어내는 과정을 말한다.( 출처 : wikipedia )
 - 프로젝트의 전체 레이어 정보를 관리하고 싶다면, 유니티 에디터의 "Edit > Project Settings > Tags & Layers" 메뉴를 확인하세요. 미리 정의된 Builtin Layer를 확인할 수 있고, 사용자가 정의한 User Layer의 이름을 변경할수 있습니다.
 - 레이어를 마스킹(Masking) 기법으로 활용하면, 월드 공간의 게임 오브젝트를 선택(Picking)하기 위해 광선(Ray)이 발사되었을 때, 특정 오브젝트만 충돌에 반응할 수 있도록 허용하거나, 강체(Rigid Body) 컴포넌트를 지닌 게임 오브젝트가 특정한 게임 오브젝트와 충돌을 하더라도 이를 무시할 수 있도록 충돌 감지(Collider Detection)의 대상(Target)에서 해당 오브젝트를 제외시키는 것이 가능해집니다. 
 - 유니티 스크립트에서 게임 오브젝트의 레이어를 레이어의 순서(Index)를 의미하는 숫자(Number) 형식으로 레이어를 지정할 수 있습니다.
 - 출처 : [유니티 레이어 마스크 by 픽케의 게임/IT블로그](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=pxkey&logNo=221324326124)
+![image](https://user-images.githubusercontent.com/69496570/139573867-6ca186f6-997d-4051-81c0-1987650162fb.png)
+- 캐릭터가 땅 위에 있는지 확인하는 함수인 CheckGroundStatus()를 만들어서 bool값인 isGrounded의 true/false여부를 판단한다. 만약 isGrounded가 true라면 그 때만 점프가 가능하도록 한다. 그러면 공중에서 캐릭터가 날아다니는 일은 발생하지 않는다ㅋㅋㅋㅋㅋㅋㅋ
+
+![image](https://user-images.githubusercontent.com/69496570/139573946-eb39b003-e03c-496e-b089-74b5ad683438.png)
+- 점프하기 위해서 조건을 하나 더 추가했다. 원래는 jump버튼으로 설정해뒀던 키만 pressed 상태면 만족했는데, 이제는 isGrounded까지 true여야 함.(&& ; and 연산)
