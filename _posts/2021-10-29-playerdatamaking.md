@@ -38,3 +38,46 @@ RigidBody : 게임오브젝트를 물리엔진에서 제어하도록 하는 컴�
 3. rigidbody component ; 물리 엔진에 의해 제어
 4. capsule collider ; 충돌 연산을 위하여 반드시 추가 필요
 5. rigidbodycharacter.cs ; c#스크립트 -> 사용자 입력 및 이동처리
+
+# UNITY editor에서 직접 구현하기
+세팅 : terrain, 계단 -> layer:ground로 설정, static 지정 
+- 비어있는 오브젝트에 capsule collider 컴포넌트 추가 
+- 빈 게임오브젝트에 capsule 오브젝트를 자식으로 추가해준다. 부모의 이름 : rigidbodycharacter
+- 자식오브젝트의 collider는 사용하지 않기 때문에 삭제하면 된다. -> remove component!
+- RigidbodyCharacter의 센터값을 (x,y,z)=(0,1,0)으로 설정한다. 그러면 항상 하단이 원점이 된다.
+  - 그 이유는? 캐릭터의 발끝이 항상 원점이 되도록 설정하기 위해서
+  - capsule도 y포지션 1로 설정하여 위로 올려둔다.
+- ![image](https://user-images.githubusercontent.com/69496570/139568445-c78dbecd-36cd-406f-b105-6aa352b73778.png)
+- rigidbodycharacter에 rigidbody 컴포넌트를 추가한다.
+  - `mass` : 질량계산 -> 중력에는 영향을 받지 않지만, rigidbody끼리 충돌했을 떄 반응을 어떻게 할 것인가를 결정한다.
+    - 무게(weight) = 질량(mass) * 중력가속도(g)
+  - `drag` : 공기저항값 -> Drag값이 적어지면 무거워보이고 커지면 가벼워보인다. 
+    - 쇠구슬과 종이 생각해보면 될 듯. 공기저항값이 비교적 높은 종이는 살랑살랑 떨어진다(영향을 많이 받음) 반면에 무거운 쇠구슬은 공기저항값이 비교적 낮고 공기에 영향을 거의 받지 않은 채 낙하한다.
+    - drag값은 8정도로 설정한다.
+    - ![image](https://user-images.githubusercontent.com/69496570/139570419-60686595-9ac9-40e7-ab84-9d8d126ffdbb.png)
+  - `angular drag` : 회전할 때 공기저항값
+  - `use gravity` : 중력을 받을 것인지 아닌지
+  - `is kinematic` : 물리엔진이 아닌 게임오브젝트의 로직에 따라 게임오브젝트를 이동시킨다. 
+    - -> 게임에서는 물리엔진 말고 자체 로직을 사용하는 경우도 많기 때문에 is kinematic이 자주 사용될 거라고 예측가능
+  - `interpolation` : 물리엔진의 애니메이션을 자연스럽게 보간한다.
+    - 기본설정으로 Interpolation는 비활성화 되어 있습니다. 주로 리지드바디 Interpolation은 플레이어의 캐릭터에 사용됩니다. 물리 효과에 대한 계산과, 렌더링 계산은 서로 다른 주기로 동작합니다. 이러한 이유로 물리효과와 그래픽효과가 완전히 동기가 맞지는 않기 때문에, 해당 오브젝트가 어색해 보일 수 있습니다. 어색해 보이는 효과가 미미할 수 있지만 특히 카메라가 메인 캐릭터를 따라가는 경우와 같이, 플레이어 캐릭터에 뚜렷하게 나타나는 경우가 있습니다. (출처 : [UNITY - 스크립팅API Rigidbody.interpolation](https://docs.unity3d.com/kr/530/ScriptReference/Rigidbody-interpolation.html))
+  - `collision detection` : 충돌처리를 연속적으로 할 것이냐 or 특정한 경우에만 할 것이냐 설정한다.
+  - `freeze position` : 물리엔진에서 값을 조정하는 것이 아니라 픽스할건지  or 물리엔진이 처리하도록 둘 것인지 설정한다.
+     - 이 프로젝트에서는 모두 물리엔진에 맡길 것이므로 unchecked 상태로 두면 된다.
+  - `freeze rotation` : y값만 사용할 것이기 때문에 x,z값을 checked 상태로 설정한다 -> 물리엔진에서 x,z 로테이션값 임의로 변경 불가능해진다.
+
+## rigidbody character에 스크립트 추가해주기
+  ![image](https://user-images.githubusercontent.com/69496570/139570842-efca0ffa-6672-4627-9376-d2fceb653372.png)
+- `FixedUpdate()` : 프레임을 기반으로 호출되는 Update 와 달리 Fixed Timestep에 설정된 값에 따라 일정한 간격으로 호출됩니다. 물리 효과가 적용된(Rigidbody) 오브젝트를 조정할 때 사용됩니다(Update는 불규칙한 호출임으로 물리엔진 충돌검사 등이 제대로 안될 수 있음). -> <mark>프레임과 상관없이 고정적으로 호출된다.</mark>
+  - cf ) `LateUpdate()`, `Update()`
+  - 출처 : [Update() , FixedUpdate() , LateUpdate() 의 차이점 by Developug](http://developug.blogspot.com/2014/09/update-fixedupdate-lateupdate.html)
+![image](https://user-images.githubusercontent.com/69496570/139571271-e10c9f3d-566a-4bf3-a175-adfdbd5b61c3.png)
+- `#region`과 `#endregion`
+  - 목적성 
+     1) 서로 관련된 method, properties, fields 등등 그룹을 지을 수 있습니다. 
+     2) 긴 코드 블록들을 작은 블록으로 만들 수 있습니다. 개발자는 코드를 보고 싶을때 코드 왼쪽 편의 '+'를 선택하여 확대할 수 있고, 그곳에서의 작업이 끝났을 경우 '-'를 선택하여 닫아 두어 최대한 현재의 작업에만 집중할 수 있습니다. 
+  - ![image](https://user-images.githubusercontent.com/69496570/139571428-6e8d5a40-75fb-4863-aeab-1e1184424788.png)
+
+
+     2) 긴 코드 블록들을 작은 블록으로 만들 수 있습니다. 개발자는 코드를 보고 싶을때 코드 왼쪽 편의 '+'를 선택하여 확대할 수 있고, 그곳에서의 작업이 끝났을 경우 '-'를 선택하여 닫아 두어 최대한 현재의 작업에만 집중할 수 있습니다. 
+  - 출처: https://nsstbg.tistory.com/5 [All about it...]
