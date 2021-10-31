@@ -125,8 +125,30 @@ public class Example : MonoBehaviour
 ## Dash 구현하기
 - dash : 질주
 ![image](https://user-images.githubusercontent.com/69496570/139572504-205e6aa7-6ddb-4b21-8029-c18ab9bcba42.png)
-- 선형대수학을 마스터못해서 도대체 뭔 식인지 모르겠다.. 선대공부를 다시해야하나 벡터 ....
+- ~~선형대수학을 마스터못해서 도대체 뭔 식인지 모르겠다.. 선대공부를 다시해야하나 벡터 ....
 - <mark>rigidbody의 저항값을 로그함수화시켜서 점차적으로 느려지는 값으로 표현될 수 있게 dashVelocity값을 계산한 것</mark>
 - 예전에 타이포그래피할 때 미분가능한 구조로 그래프를 그렸던 것처럼 로그함수사용의 궁극적 목적은 정말 실제처럼 dash하게 보이기 위해서 사용하는 것
 - ![image](https://user-images.githubusercontent.com/69496570/139572610-247985d1-fb95-4561-8579-ff9723250e35.png) 
 - 딱 그냥 봐도 일반 직선그래프랑은 모션이 다를 것 같지 않나?
+
+![image](https://user-images.githubusercontent.com/69496570/139572826-4bb525d0-ab81-4de1-a0dd-db75b1335342.png)
+### `AddForce()`
+- 출처 : [AddForce에 대한 모든 것(+relaive force) by 노는 게 제일 좋아](https://luv-n-interest.tistory.com/687)
+- 형태
+  - 1. `public void AddForce(Vector3 force, ForceMode mode = ForceMode.Force)`
+  - 2. `public void AddForce(float x, float y, float z, ForceMode mode = ForceMode.Force) `
+  - 사실 두 형태가 본질은 같다. 왜냐하면 1번은 force라는 변수가 하나의 벡터값인 것이고, 2번째 형태는 벡터값이 아닌 대신에 벡터의 구성요소들을 매개변수로 받고 있기 떄문이다.
+  - 간단하게  `Vector3 force = float x,y,z` 라고 생각하면 되겠다. -> AddForce( 방향 x 힘 값, 힘의 종류 )
+- 기능 : addforce -> force를 더해준다. 
+  - rigidbody가 active상태일 때 힘을 전달해준다(addforce)
+  - 이런 force calculation은 FixedUpDate()에서 일어난다.
+### ForceMode
+- 어떤 식으로 힘을 전달하는지
+- ForceMode의 네 가지 타입 
+- ![image](https://user-images.githubusercontent.com/69496570/139573104-41b6a1ab-2d8e-431b-a9d2-44d1ab8a582a.png)
+- 질량(mass)을 무시하느냐? 연속적인 힘이냐? 에 따른 분류이다. 아래는 출처 블로그 작성자분이 설명하신 건데 너무 이해가 잘 되어서 들고왔다. ~~연속적인 힘이 뭔소리지
+  - <span style="color:red">Force</span>는 연속 + 질량 무시 X : 현실적인 물리현상을 나타낼 때 많이 씀
+  - <span style="color:green">Accel</span>은 연속 + 질량 무시 O : 질량에 관계 없이 가속된다. 즉, 오브젝트의 질량에 관계없이 가속을 주고싶다면 이용한다.
+  - <span style="color:blue">Impulse</span>는 불연속 + 질량 무시 X : 짧은 순간의 힘, 충돌이나 폭발과 같은 것에 많이 쓰인다.
+  -  <span style="color:gray">Velocity Change</span> 불연속 + 질량 무시 O : 마찬가지로 질량에 관계 없이 속도를 바꾼다. 질량이 다른 함대 같은 경우 같은 힘을 줘서는 같은 속도로 움직일 수 없는데 이 모드를 사용하면 가능하다.
+  
