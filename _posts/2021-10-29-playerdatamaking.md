@@ -141,14 +141,17 @@ public class Example : MonoBehaviour
   - 간단하게  `Vector3 force = float x,y,z` 라고 생각하면 되겠다. -> AddForce( 방향 x 힘 값, 힘의 종류 )
 - 기능 : addforce -> force를 더해준다. 
   - rigidbody가 active상태일 때 힘을 전달해준다(addforce)
-  - 이런 force calculation은 FixedUpDate()에서 일어난다.
+  - 이런 force calculation은 FixedUpdate()에서 일어난다.
+
+
 ### ForceMode
 - 어떤 식으로 힘을 전달하는지
 - ForceMode의 네 가지 타입 
 - ![image](https://user-images.githubusercontent.com/69496570/139573104-41b6a1ab-2d8e-431b-a9d2-44d1ab8a582a.png)
-- 질량(mass)을 무시하느냐? 연속적인 힘이냐? 에 따른 분류이다. 아래는 출처 블로그 작성자분이 설명하신 건데 너무 이해가 잘 되어서 들고왔다. ~~연속적인 힘이 뭔소리지
+- 질량(mass)을 무시하느냐? 연속적인 힘이냐? 에 따른 분류이다. 아래는 출처 블로그 작성자분이 설명하신 건데 너무 이해가 잘 되어서 들고왔다. ~~연속적인 힘이 뭔소리지~~
   - <span style="color:red">Force</span>는 연속 + 질량 무시 X : 현실적인 물리현상을 나타낼 때 많이 씀
   - <span style="color:green">Accel</span>은 연속 + 질량 무시 O : 질량에 관계 없이 가속된다. 즉, 오브젝트의 질량에 관계없이 가속을 주고싶다면 이용한다.
   - <span style="color:blue">Impulse</span>는 불연속 + 질량 무시 X : 짧은 순간의 힘, 충돌이나 폭발과 같은 것에 많이 쓰인다.
   -  <span style="color:gray">Velocity Change</span> 불연속 + 질량 무시 O : 마찬가지로 질량에 관계 없이 속도를 바꾼다. 질량이 다른 함대 같은 경우 같은 힘을 줘서는 같은 속도로 움직일 수 없는데 이 모드를 사용하면 가능하다.
+  - ~~불연속에 질량까지 무시하면 비현실적 모션인건가?~~
   
