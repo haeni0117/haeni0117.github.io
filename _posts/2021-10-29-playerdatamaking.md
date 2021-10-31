@@ -80,5 +80,44 @@ RigidBody : 게임오브젝트를 물리엔진에서 제어하도록 하는 컴�
   - 출처: https://nsstbg.tistory.com/5 [All about it...]
 
 ### moveposition()
+![image](https://user-images.githubusercontent.com/69496570/139571541-2696ec03-89e1-4623-8449-8c489cfaf0a0.png)
 - Moves the kinematic Rigidbody towards position.
+- Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
+  - teleport란? 순간이동
+
+- 캐릭터가 capsule이라서 direction을 파악하기가 어려움 -> cube mesh 추가
+### Vector3.Scale()
+- public static Vector3 Scale(Vector3 a, Vector3 b) => 벡터의 곱
+- Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
+```
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    Rigidbody m_Rigidbody;
+    public float m_Speed = 5f;
+
+    void Start()
+    {
+        //Fetch the Rigidbody from the GameObject with this script attached
+        m_Rigidbody = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        //Store user input as a movement vector
+        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        //Apply the movement vector to the current position, which is
+        //multiplied by deltaTime and speed for a smooth MovePosition
+        m_Rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * m_Speed);
+    }
+}
+```
+
+
+## jump, dash 구현하기
+
+
+- Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition현
 - Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
