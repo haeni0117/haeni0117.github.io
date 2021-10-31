@@ -117,8 +117,16 @@ public class Example : MonoBehaviour
 ```
 
 
-## jump, dash 구현하기
-
+## jump 구현하기
 
 - Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition현
 - Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
+
+## Dash 구현하기
+- dash : 질주
+![image](https://user-images.githubusercontent.com/69496570/139572504-205e6aa7-6ddb-4b21-8029-c18ab9bcba42.png)
+- 선형대수학을 마스터못해서 도대체 뭔 식인지 모르겠다.. 선대공부를 다시해야하나 벡터 ....
+- <mark>rigidbody의 저항값을 로그함수화시켜서 점차적으로 느려지는 값으로 표현될 수 있게 dashVelocity값을 계산한 것</mark>
+- 예전에 타이포그래피할 때 미분가능한 구조로 그래프를 그렸던 것처럼 로그함수사용의 궁극적 목적은 정말 실제처럼 dash하게 보이기 위해서 사용하는 것
+- ![image](https://user-images.githubusercontent.com/69496570/139572610-247985d1-fb95-4561-8579-ff9723250e35.png) 
+- 딱 그냥 봐도 일반 직선그래프나 저차함수랑은 모션이 다를 것 같지 않나?
