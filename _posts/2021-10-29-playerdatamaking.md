@@ -89,6 +89,7 @@ RigidBody : 게임오브젝트를 물리엔진에서 제어하도록 하는 컴�
 ### Vector3.Scale()
 - public static Vector3 Scale(Vector3 a, Vector3 b) => 벡터의 곱
 - Rigidbody.MovePosition moves a Rigidbody and complies with the interpolation settings. When Rigidbody interpolation is enabled, Rigidbody.MovePosition creates a smooth transition between frames. Unity moves a Rigidbody in each FixedUpdate call. The position occurs in world space. Teleporting a Rigidbody from one position to another uses Rigidbody.position instead of MovePosition.
+
 ```
 using UnityEngine;
 
