@@ -20,6 +20,7 @@ last_modified_at: 2021-11-11T08:06:00-05:00
 - 예제코드로 코루틴의 동작에 대해 구체적으로 살펴보자.
   - CF ) 아래의 코드는 update()함수를 통해 attacker 클래스를 구현한 것이다. 매 프레임마다 호출되는 함수답게 조건분기의 연속이다. 
   - 코루틴으로 구현한 공격함수와 비교한다면, update()로 구현한다는 것이 얼마나 비효율적인지를 느낄 수 있다.
+  
   ```
   public class Attacker : MonoBehaviour
   {
@@ -54,7 +55,10 @@ last_modified_at: 2021-11-11T08:06:00-05:00
   }
 
   ```
+  
   - 코루틴(Coroutine)으로 구현한 공격함수 코드
+
+
   ```
   // 코루틴으로 구현한 공격 딜레이
   IEnumerator CountAttackDelay()
@@ -63,6 +67,7 @@ last_modified_at: 2021-11-11T08:06:00-05:00
     isDelay = false;
   }
   ```
+  
     - 코루틴은 다른 함수와 다르게 특수한 문법이 존재한다. 지금 당장 위 코드만 봐도 `IEnumerator`,`yield return` 등등 좀 생소한 키워드가 있는 것을 확인할 수 있다.
 
 ## 코루틴(Coroutine)함수 만드는 방법
@@ -73,6 +78,8 @@ last_modified_at: 2021-11-11T08:06:00-05:00
   - 반환 타입의 조건이 충족되면 이 다음 줄부터 다시 코루틴이 동작한다.
   - 코루틴이 제어권을 얼마나 양보할 지 정하는 반환 타입에는 여러 가지가 있다.
 3. 반환 타입 종류
+
+
 ```
 // 한 프레임 기다림
 yield return null;
@@ -89,6 +96,7 @@ yield return new WaitForFixedUpdate();
 // 다음 프레임의 Update와 모든 렌더링이 끝날 때까지 기다림
 yield return new WaitForEndOfFrame();
 ```
+
 4. 코루틴 함수는 실행할 때 일반 함수처럼 호출하는 것이 아니라, StartCoroutine 함수를 이용해서 호출해야 한다.
 
 ## 출처
