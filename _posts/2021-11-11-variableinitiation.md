@@ -1,5 +1,5 @@
 ---
-title: "[unity] 변수 초기화"
+title: "[unity/도전학기] 합성창에서 변수(com2) 초기화 이슈"
 categories:
   - 도전학기
 tags:
