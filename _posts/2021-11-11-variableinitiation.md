@@ -44,3 +44,61 @@ public void secondselectionMethod(){
         PopupText[2].text=com1+"과 "+com2+"을(를) 합성하시겠습니까?";
     }
 ````
+
+## 문제해결
+- 처음에는 코루틴함수를 써야하나 고민했었다. 근데 그건 내가 코루틴함수에 대해 제대로 이해하지 못해서 그랬다. 코루틴의 키워드는 [지연] 그리고 [대기]이다. -> 코루틴함수 공부한 거 정리했음
+- null값이라는 걸 사용할 생각을 왜 못했지?? 값을 초기화하려면 값이 없는 상태여야하는데 그게 바로 null
+- 합성에 사용되는 두 아이템에 대한 변수가 `com1`,`com2`였는데 이 변수들을 메소드 영역이 아니라 클래스에서 선언하고 첫번째 아이템을 선택하는 함수를 실행할 때 `com2`는 무조건 null값을 가지도록 수정했더니 제대로 구현되었다.
+- <img width="744" alt="스크린샷 2021-11-11 오후 8 29 41" src="https://user-images.githubusercontent.com/69496570/141291192-688e59c0-a700-4564-a0ed-7457c27e9f07.png">
+- <img width="741" alt="스크린샷 2021-11-11 오후 8 29 49" src="https://user-images.githubusercontent.com/69496570/141291201-93b08942-308d-424c-8fb9-af60d47c6cd3.png">
+- 코드
+  ```
+  public void buttonclick(int button_num){
+        switch(AllButtonList[button_num].Type){
+            case "yes":
+            switch(AllButtonList[button_num].PopupType){
+                case "tool":
+                Debug.Log("YES / Tool");
+                break;
+                case "decomposition":
+                Debug.Log("YES / Decomposition");
+                break;
+                case "composition":
+                Debug.Log("YES / Composition");
+                break;
+            }
+            break;
+            case "no":
+            switch(AllButtonList[button_num].PopupType){
+                case "tool":
+                Debug.Log("NO / Tool");
+                popUpPanel[0].SetActive(false);
+                break;
+                case "decomposition":
+                Debug.Log("NO / Decomposition");
+                popUpPanel[1].SetActive(false);
+                break;
+                case "composition":
+                isAvailable=true;
+                Debug.Log("NO / Composition");
+                popUpPanel[2].SetActive(false);
+                secondselection.SetActive(false);
+                break;
+            }
+            break;
+
+        }
+
+    }
+  
+  ```
+  
+  ```
+   public void initiate_method(){
+        CompositionImage2.sprite=null;
+        com2=null;
+    }
+  ```
+  
+  - <img width="907" alt="스크린샷 2021-11-11 오후 8 34 54" src="https://user-images.githubusercontent.com/69496570/141291433-ab643112-a6a3-420c-a853-8dabdfda1106.png">
+  - <img width="557" alt="스크린샷 2021-11-11 오후 8 35 03" src="https://user-images.githubusercontent.com/69496570/141291440-f2c4ceb3-8d9d-4e3a-ac36-842a29cd4280.png">
