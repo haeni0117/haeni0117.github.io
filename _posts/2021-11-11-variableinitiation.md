@@ -20,6 +20,8 @@ last_modified_at: 2021-11-11T08:06:00-05:00
 - `com2`라는 변수가 처음처럼 텅 비었으면 좋겠는데 어떻게 해결해야할까?
 <img width="1439" alt="스크린샷 2021-11-11 오후 5 43 48" src="https://user-images.githubusercontent.com/69496570/141266608-1128a8ed-09d8-49ff-ac61-dd3a05edf3e6.png">
 <img width="1217" alt="스크린샷 2021-11-11 오후 5 44 19" src="https://user-images.githubusercontent.com/69496570/141266610-1499e9e2-d98d-40c5-88f3-e55e8bf06a91.png">
+
+## 관련코드
 ```
 public void secondselectionMethod(){
         secondselection.SetActive(true);
