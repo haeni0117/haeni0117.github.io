@@ -45,7 +45,7 @@ public void secondselectionMethod(){
     }
 ````
 
-## 문제해결
+## 문제해결(null값 사용)
 - 처음에는 코루틴함수를 써야하나 고민했었다. 근데 그건 내가 코루틴함수에 대해 제대로 이해하지 못해서 그랬다. 코루틴의 키워드는 [지연] 그리고 [대기]이다. -> 코루틴함수 공부한 거 정리했음
 - null값이라는 걸 사용할 생각을 왜 못했지?? 값을 초기화하려면 값이 없는 상태여야하는데 그게 바로 null
 - 합성에 사용되는 두 아이템에 대한 변수가 `com1`,`com2`였는데 이 변수들을 메소드 영역이 아니라 클래스에서 선언하고 첫번째 아이템을 선택하는 함수를 실행할 때 `com2`는 무조건 null값을 가지도록 수정했더니 제대로 구현되었다.
@@ -100,5 +100,5 @@ public void secondselectionMethod(){
     }
   ```
   
-  - <img width="907" alt="스크린샷 2021-11-11 오후 8 34 54" src="https://user-images.githubusercontent.com/69496570/141291433-ab643112-a6a3-420c-a853-8dabdfda1106.png">
-  - <img width="557" alt="스크린샷 2021-11-11 오후 8 35 03" src="https://user-images.githubusercontent.com/69496570/141291440-f2c4ceb3-8d9d-4e3a-ac36-842a29cd4280.png">
+<img width="907" alt="스크린샷 2021-11-11 오후 8 34 54" src="https://user-images.githubusercontent.com/69496570/141291433-ab643112-a6a3-420c-a853-8dabdfda1106.png">
+<img width="557" alt="스크린샷 2021-11-11 오후 8 35 03" src="https://user-images.githubusercontent.com/69496570/141291440-f2c4ceb3-8d9d-4e3a-ac36-842a29cd4280.png">
