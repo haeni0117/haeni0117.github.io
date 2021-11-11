@@ -77,8 +77,10 @@ last_modified_at: 2021-11-11T08:06:00-05:00
   - yield return 시점에 도착하면 코루틴은 반환 타입으로 정의한 만큼 코드 동작을 중지하고 제어권을 유니티에 돌려준다.
   - 반환 타입의 조건이 충족되면 이 다음 줄부터 다시 코루틴이 동작한다.
   - 코루틴이 제어권을 얼마나 양보할 지 정하는 반환 타입에는 여러 가지가 있다.
-3. 반환 타입 종류
 
+
+3. 코루틴 함수는 실행할 때 일반 함수처럼 호출하는 것이 아니라, StartCoroutine 함수를 이용해서 호출해야 한다.
+4. 반환 타입 종류
 
 ```
 // 한 프레임 기다림
@@ -97,7 +99,6 @@ yield return new WaitForFixedUpdate();
 yield return new WaitForEndOfFrame();
 ```
 
-4. 코루틴 함수는 실행할 때 일반 함수처럼 호출하는 것이 아니라, StartCoroutine 함수를 이용해서 호출해야 한다.
 
 ## 출처
 - [베르의 프로그래밍 노트 - Programming 코루틴(Coroutine) 다루기](https://wergia.tistory.com/219)
