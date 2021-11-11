@@ -15,7 +15,16 @@ last_modified_at: 2021-11-11T08:06:00-05:00
   - ![image](https://user-images.githubusercontent.com/69496570/141271341-0823d71a-2159-40bd-ac31-00e424831efa.png)
 - 그렇다면, 코루틴함수는 조건부 update()라고 볼 수 있지 않을까?
 
+## FixedUpdate 함수
+- MonoBehaviour가 활성화 되어있는 경우에, 매 고정된 프레임율의 프레임(fixed framerate frame)마다 호출된다.
+- Rigidbody를 다루는 경우에, Update대신 FixedUpdate를 사용해야 합니다. 
+  - 예를 들어 리지드바디에 힘을 가하는 경우에, FixedUpdate안에서 매 고정된 프레임마다 힘을 적용해야 합니다. 이 경우 Upate에서 매 프레임마다 힘을 적용하지 않도록 합니다.
+- 코루틴, Update(), FixedUpdate()비교
+   - Update(매 프레임 호출),
+   - FixedUpdate(1초 당 정해진 횟수 호출 (50회 40회 등) 
+
 ## 코루틴(Coroutine) 함수
+- 코루틴이라는 것은 어떠한 작업을 처리할 때 필요에 따라 <mark>시간 간격을 두고 작업을 처리</mark>할 수 있도록 도와주는 함수 형식이다.
 - Update 함수와 따로 일시적으로 돌아가는 서브 동작을 구현하거나, 어떤 다른 작업이 처리되는 것을 기다리는 기능을 구현하는데 쓰이는 것이 바로 코루틴(coroutine)
 - 예제코드로 코루틴의 동작에 대해 구체적으로 살펴보자.
   - CF ) 아래의 코드는 update()함수를 통해 attacker 클래스를 구현한 것이다. 매 프레임마다 호출되는 함수답게 조건분기의 연속이다. 
@@ -102,4 +111,6 @@ yield return new WaitForEndOfFrame();
 
 ## 출처
 - [베르의 프로그래밍 노트 - Programming 코루틴(Coroutine) 다루기](https://wergia.tistory.com/219)
+- [Prosto - 코루틴이란? 사용법은?](https://prosto.tistory.com/68)
+
 
