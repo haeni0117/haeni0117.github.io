@@ -1,5 +1,5 @@
 ---
-title: "C#과 java차이점 + 개발분야 아카이빙"
+title: "C#과 Java차이점 + 개발분야 아카이빙"
 categories:
   - C#
   - JAVA
@@ -8,9 +8,10 @@ tags:
   - JAVA
 last_modified_at: 2021-11-11T08:06:00-05:00
 ---
-# C#
-- C#은 Native언어가 아니다보니 MS의 .Net의 CLR(Common Language Runtime)에 있는 JIT(Just-In_Time) 컴파일러를 거쳐서 Native코드로 변환되어 실행한다.
-- 위 현상이 성능하락의 원인중 하나로 꼽히기도 합니다.
+# C# VS Java
+- <span style="color:red">C#은 Native언어가 아니다</span>보니 MS의 .Net의 CLR(Common Language Runtime)에 있는 JIT(Just-In_Time) 컴파일러를 거쳐서 Native코드로 변환되어 실행한다.
+  - Native 언어에 비해 step이 추가적으로 존재한다 -> 비용 증가
+- 위 현상(네이티브 코드로 변환 => 비용증가)이 <span style="color:red">성능하락</span>의 원인중 하나로 꼽히기도 한다.
 
 # Native 언어
 - 컴파일, 링크, 빌드를 통해 CPU가 이해하는 기계어로 바꾸어 소프트웨어를 생성하는 언어
