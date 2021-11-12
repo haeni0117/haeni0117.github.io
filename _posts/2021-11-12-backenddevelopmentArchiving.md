@@ -1,5 +1,5 @@
 ---
-title: "[archiving]백엔드 개발자를 꿈꾸는 학생개발자에게 - 1 "
+title: "백엔드 개발자를 꿈꾸는 학생개발자에게 - 1 "
 categories:
   - Back-end
 tags:
