@@ -48,4 +48,4 @@ last_modified_at: 2021-11-11T08:06:00-05:00
 - [이 세상엔 하고싶은 것, 해야할 것이 많다 - JAVA와 C#의 차이점](https://skfkdkdlaos.tistory.com/4)
 - [Developer Lee - 프로그래밍 언어란?](https://unagi44.wordpress.com/tag/native-%EC%96%B8%EC%96%B4/)
 - [WireFrame - 파이썬은 인터프리터언어입니까?](https://soooprmx.com/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%80-%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0%EC%96%B8%EC%96%B4%EC%9E%85%EB%8B%88%EA%B9%8C/)
-- [WPF란? - Visual Studio (Windows) | Microsoft Docs](https://docs.microsoft.com/ko-kr/visualstudio/designers/getting-started-with-wpf?view=vs-2022)
+- [Microsoft Docs - WPF란?](https://docs.microsoft.com/ko-kr/visualstudio/designers/getting-started-with-wpf?view=vs-2022)
