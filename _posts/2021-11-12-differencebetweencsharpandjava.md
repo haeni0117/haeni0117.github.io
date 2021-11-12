@@ -23,8 +23,11 @@ last_modified_at: 2021-11-11T08:06:00-05:00
 
 ## 2. 프로그램 디자인 편의성
 - C# : Winform, WPF와 같은 방식으로 개발하게 되면 아래와 같이 편하게 디자인을 진행할 수 있다. 
-  - Winform : 기존의 콘솔 창을 사용하는 CUI(Character User Interface)와 다르게 GUI(Graphical User Interface)를 제공하는 것이 Windows Form -> 줄여 말하자면 윈폼(Winform)
-  - WPF
+  - Winform : 기존의 콘솔 창을 사용하는 CUI(Character User Interface)와 다르게 <span style="color:blue">GUI(Graphical User Interface)를 제공</span>하는 것이 Windows Form -> 줄여 말하자면 윈폼(Winform)
+  - WPF((Windows Presentation Foundation) : <span style="color:blue"> 데스크톱 클라이언트 애플리케이션을 만드는 UI 프레임워크</span>이다.
+  - WPF 개발 플랫폼은 애플리케이션 모델, 리소스, 컨트롤, 그래픽, 레이아웃, 데이터 바인딩, 문서 및 보안을 포함하여 다양한 애플리케이션 개발 기능 세트를 지원한다.
+
+
 # Native 언어
 - 컴파일, 링크, 빌드를 통해 CPU가 이해하는 기계어로 바꾸어 소프트웨어를 생성하는 언어
 - Native 언어 외에도 ‘인터프리터 언어’, ‘Hybrid 언어’가 있다.
