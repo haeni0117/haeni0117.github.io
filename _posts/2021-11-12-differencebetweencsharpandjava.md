@@ -19,13 +19,18 @@ last_modified_at: 2021-11-11T08:06:00-05:00
     - JAVA : 10억번을 반복 시 1초, 100억번을 반복하였는데 3초
   - 무겁지 않은 프로그램은 사실 크게 차이가 없지만(-> 10억번 반복 : C#(1.8s) vs JAVA(1s)) 단순하게 for문을 여러번 돌리는 테스트만 진행해봐도 반복횟수가 늘어날수록(프로그램이 무거워질수록) 완료되기까지의 속도가 서로 많이 차이나는것을 볼 수 있다.
   - 즉, 간단한 프로그램에서는 별 차이가 없으나, 프로그램이 무거워질수록 성능차이가 커진다.
-
+- <u>결론 : C#이 네이티브 언어가 아니고, JAVA는 JVM을 통한 컴파일러 과정이 존재함에도 성능이 좋아서 처리속도는 JAVA가 C#보다 낫다. 프로그램 매스가 커질수록 성능 갭은 커진다.</u>
 
 ## 2. 프로그램 디자인 편의성
 - C# : Winform, WPF와 같은 방식으로 개발하게 되면 아래와 같이 편하게 디자인을 진행할 수 있다. 
   - Winform : 기존의 콘솔 창을 사용하는 CUI(Character User Interface)와 다르게 <span style="color:blue">GUI(Graphical User Interface)를 제공</span>하는 것이 Windows Form -> 줄여 말하자면 윈폼(Winform)
   - WPF((Windows Presentation Foundation) : <span style="color:blue"> 데스크톱 클라이언트 애플리케이션을 만드는 UI 프레임워크</span>이다.
   - WPF 개발 플랫폼은 애플리케이션 모델, 리소스, 컨트롤, 그래픽, 레이아웃, 데이터 바인딩, 문서 및 보안을 포함하여 다양한 애플리케이션 개발 기능 세트를 지원한다.
+- JAVA : Java는 디자인을 C#처럼 간단하게 하기 쉽지 않다. 
+  - 쉽지 않은 이유 
+    - Java는 UI 디자인을 초기에 나온 AWT 혹은 후에 개선되어 나온 Swing을 이용하여 둘 다 <span style="color:red">코드로 디자인</span>을 하기 때문이다.
+    - Java는 Swing의 클래스인 JFrame을 상속받은 클래스 안에 코드로 직접 해주어야하는 약간의 불편함이 있다.
+- <u>결론 : 프로그램 디자인 편의성은 코드 없이 Winform과 WPF와 같은 방식이 제공되는 C#이 직접 코드를 작성해야하는 JAVA보다 낫다.</u>
 
 
 # Native 언어
