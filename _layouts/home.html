@@ -6,7 +6,7 @@ layout: archive
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Category" }}</h3>
 {{ content }} -->
 <body>
-<div class="site-category">
+<!-- <div class="site-category">
     <ul class='cat1'>
       <li><a href="/">Home</a></li>
       <li><a href="/">Python</a></li>
@@ -19,7 +19,7 @@ layout: archive
   {% for category in site.categories %}
     <li>{{ category | first}}({{ category | last | size }})</li>
   {% endfor %}
-  </ul>
+  </ul> -->
 </div>
 {% if paginator %}
   {% assign posts = paginator.posts %}
