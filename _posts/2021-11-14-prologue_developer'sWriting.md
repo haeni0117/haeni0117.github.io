@@ -7,13 +7,6 @@ tags:
   - 글쓰기
 last_modified_at: 2021-11-14T08:06:00-05:00
 ---
-<title>codeomni.tistory.com css3 mark 태그 형광펜 마크 색상 변경 소스 코드 예제</title>
-        <style>
-            body {
-                background-color: #9adaca;
-            }
-        </style>
-
 
 # 개발자는 글을 못 쓴다?
 - 필자는 글쓰기 강의를 다닐 때 산신령이야기를 통해 간결한 글쓰기를 강의한다.
@@ -25,10 +18,9 @@ last_modified_at: 2021-11-14T08:06:00-05:00
 - 개발자의 글쓰기 : 클래스/함수의 이름, 주석, 에러메시지, 릴리스문서, 개발가이드
   - SM(System Management)업무 : 장애보고서 
   - SI(System Integration)업무 : 제안서와 ERD, 기능명세서 등과 같은 개발산출물
-
-- 정확성 : 틀림이 없이 확실한 것
-- 간결성 : 글에 군더더기가 없고 간단하고 깔끔한 것, 구구절절이 아닌 핵심만 설명
-- 가독성 : 쉽게 읽히는 것 by 쉬운 용어, 표나 그림으로 정리, 문서의 체계와 위계
+- <mark style="background-color: black;"><span style="color:white">정확성</span></mark> : 틀림이 없이 확실한 것
+- <mark style="background-color: black;"><span style="color:white">간결성</span></mark> : 글에 군더더기가 없고 간단하고 깔끔한 것, 구구절절이 아닌 핵심만 설명
+- <mark style="background-color: black;"><span style="color:white">가독성</span></mark> : 쉽게 읽히는 것 by 쉬운 용어, 표나 그림으로 정리, 문서의 체계와 위계
 - 정확성, 간결성, 가독성 : 서로 대치되는 목표
   - 정확성 ↑ ⇒ 간결성, 가독성 ↓ (∵ 부연설명이 늘어나서)
   - 간결성 ↑ ⇒ 정확성, 가독성 ↓ (∵ 너무 간추려버려서) 
@@ -113,7 +105,7 @@ function checkLegalAdult(m){
   - 대기업 : 테크니컬라이터가 개발가이드 같은 문서를 관리하고 쓸 수 있다.
   - 하지만 내가 속한 조직이 Google, Naver과 같은 대기업이 아니라면? 
   - 테크니컬라이터만큼은 아니더라도 글을 잘쓰는 것은 분명 플러스요인이다. ~~오히려 좋아~~
-  - <span style="color:red">주요 이유 : 개발자를 위한 글쓰기 교육의 부재</span>
+  - <mark><span style="color:red">주요 이유 : 개발자를 위한 글쓰기 교육의 부재</span></mark>
     - 테크니컬라이터를 두고 있는 대기업도 개발자에게 일반적인 비즈니스 보고서 작성법만 가르친다. 
     - <span style="color:red">즉, 개발자가 현업에서 필요로 하는 글쓰기 방법을 배울 수 없다는 것이다.</span>
     - 개발자 타겟팅 도서 : 코딩기술 위주
