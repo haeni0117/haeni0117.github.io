@@ -18,9 +18,9 @@ last_modified_at: 2021-11-14T08:06:00-05:00
 - 개발자의 글쓰기 : 클래스/함수의 이름, 주석, 에러메시지, 릴리스문서, 개발가이드
   - SM(System Management)업무 : 장애보고서 
   - SI(System Integration)업무 : 제안서와 ERD, 기능명세서 등과 같은 개발산출물
-- <mark style="background-color: black;"><span style="color:white">**정확성**</span></mark> : 틀림이 없이 확실한 것
-- <mark style="background-color: black;"><span style="color:white">**간결성**</span></mark> : 글에 군더더기가 없고 간단하고 깔끔한 것, 구구절절이 아닌 핵심만 설명
-- <mark style="background-color: black;"><span style="color:white">**가독성**</span></mark> : 쉽게 읽히는 것 by 쉬운 용어, 표나 그림으로 정리, 문서의 체계와 위계
+- **<mark style="background-color: black;"><span style="color:white">정확성</span></mark> : 틀림이 없이 확실한 것**
+- **<mark style="background-color: black;"><span style="color:white">간결성</span></mark> : 글에 군더더기가 없고 간단하고 깔끔한 것, 구구절절이 아닌 핵심만 설명**
+- **<mark style="background-color: black;"><span style="color:white">가독성</span></mark> : 쉽게 읽히는 것 by 쉬운 용어, 표나 그림으로 정리, 문서의 체계와 위계**
 - 정확성, 간결성, 가독성 : 서로 대치되는 목표
   - 정확성 ↑ ⇒ 간결성, 가독성 ↓ (∵ 부연설명이 늘어나서)
   - 간결성 ↑ ⇒ 정확성, 가독성 ↓ (∵ 너무 간추려버려서) 
