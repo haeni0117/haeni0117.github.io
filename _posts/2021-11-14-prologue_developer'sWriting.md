@@ -7,6 +7,14 @@ tags:
   - 글쓰기
 last_modified_at: 2021-11-14T08:06:00-05:00
 ---
+<title>codeomni.tistory.com css3 mark 태그 형광펜 마크 색상 변경 소스 코드 예제</title>
+        <style>
+            body {
+                background-color: #9adaca;
+            }
+        </style>
+
+
 # 개발자는 글을 못 쓴다?
 - 필자는 글쓰기 강의를 다닐 때 산신령이야기를 통해 간결한 글쓰기를 강의한다.
 - 개발과 DB설계를 하는 DBA : "나무꾼,산신령,도끼를 각각 W,G,x로 치환해서 요약해야하는 것 아니냐?"
