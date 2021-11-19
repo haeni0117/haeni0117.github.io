@@ -55,7 +55,35 @@ namespace ConsoleApp3
   - 따라서 기존방식으로는 캐릭터가 총 몇개 생성되었는지 알수없다.
   - 이러한 문제를 해결하기위한 키워드가 static이다
 
+## 코드수정
+```
+[System.Serializable]
+public class bathroom_inspect : MonoBehaviour
+{
+    public static int cnt;
+    public List<inspection> Tools;
+    public GameObject toiletItems;
+    private bool showerbooth, showerboothshelves,shampoo,rinse,bodywash,sparekey,iotbidet,footmat,mirrorandshelves,medicine,toothpaste,tissue,shaver,dryer,towel,coat,washstand,towelhanger= false;
 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      cnt = ch1.cnt;
+      Debug.Log("hihi");
+      Debug.Log("! : "+cnt);
+      if(cnt==172){
+        toiletItems.SetActive(true);
+      }
+    }
+}
+```
 
 ## 출처
 - [SeeRoE 프로그래밍 기록 - [C# 때려잡기] C# 강의 23. static 변수 및 함수](https://see-ro-e.tistory.com/120)
