@@ -5,7 +5,7 @@ categories:
 tags:
   - error
   - static
-last_modified_at: 2021-11-18T09:06:00-05:00
+last_modified_at: 2021-11-19T09:06:00-05:00
 ---
 # CS0176
 cannot be accessed with an instance reference; qualify it with a type name instead
@@ -84,6 +84,8 @@ public class bathroom_inspect : MonoBehaviour
     }
 }
 ```
+- 수정과정 
+  - update()를 통해 cnt를 지속적으로 업데이트한다. → `cnt = ch1.cnt`
 
 ## 출처
 - [SeeRoE 프로그래밍 기록 - [C# 때려잡기] C# 강의 23. static 변수 및 함수](https://see-ro-e.tistory.com/120)
