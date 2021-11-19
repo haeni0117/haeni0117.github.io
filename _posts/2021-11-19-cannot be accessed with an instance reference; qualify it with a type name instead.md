@@ -50,6 +50,12 @@ namespace ConsoleApp3
   - ![image](https://user-images.githubusercontent.com/69496570/142608856-16d0734d-8e48-4533-b56a-e385e0c7ec87.png)
   - 클래스를 불러올때 어떤 namespace 에서 불러올 건지 정하고 클래스를 부른다.
   - namespace를 일일히 이름을 적어주기가 힘드니 using 이라는 키워드가 존재한다.
+- 만약 static 변수가 아니라면?
+  - 맴버 변수로 객체마다 num이 할당되고 `num++`도 객체마다 이루어지기때문에 `mario.num`은 당연히 1이나온다 (마리오 생성자는 1번만 불렸으므로)
+  - 따라서 기존방식으로는 캐릭터가 총 몇개 생성되었는지 알수없다.
+  - 이러한 문제를 해결하기위한 키워드가 static이다
+
+
 
 ## 출처
 - [SeeRoE 프로그래밍 기록 - [C# 때려잡기] C# 강의 23. static 변수 및 함수](https://see-ro-e.tistory.com/120)
