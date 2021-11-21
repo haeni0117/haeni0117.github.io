@@ -1,13 +1,8 @@
 ---
-title: "[cloudday] 15학번 김가온 선배님 - "스타트업에서 개발자로 일하기" "
+title: "[cloudday] 김가온선배님(15) - 스타트업에서 개발자로 일하기"
 categories:
   - Cloudday
 tags:
-  - startup
-  - developer
-  - cloudday
-  - ewhawomansuniversity
-  - computerscience
 last_modified_at: 2021-11-20T09:06:00-05:00
 ---
 ## 선배님의 스타트업 선택 이유
