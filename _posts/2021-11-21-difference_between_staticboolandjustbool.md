@@ -22,8 +22,20 @@ last_modified_at: 2021-11-20T09:06:00-05:00
   - local  ↔ global
   - <mark>static  ↔ ???</mark>
 
+- ** SOLUTION : remove `static` keyword, or replace with `extern`**
+- C#에서도 extern 키워드가 있나? 
+  - ![image](https://user-images.githubusercontent.com/69496570/142763907-d53927ea-2a3d-4825-915b-10da3ba1f8c3.png)
+  - ~~ㅋㅋㅋㅋㅁㅊ있네....  당장 script 수정간다...~~
 
-## Translation Unit?
+
+
+--- 
+## Header File이란?
+컴퓨터 프로그래밍에서, 특히 C와 C++ 프로그래밍 언어에서, 헤더 파일(header file) 또는 인클루드 파일(include file)은 컴파일러에 의해 다른 소스 파일에 자동으로 포함된 소스 코드의 파일이다. 
+일반적으로 헤더 파일들은 다른 소스 파일 속의 첫 부분에 포함된다.
+
+
+## Translation Unit이란?
 - In C and C++ programming language terminology
 - A translation unit (or more casually a compilation unit) is the ultimate input to a C or C++ compiler from which an object file is generated.
 - A translation unit roughly consists of a source file after it has been processed by the C preprocessor 
@@ -33,4 +45,4 @@ last_modified_at: 2021-11-20T09:06:00-05:00
 - [위키백과 - Translation unit (programming)](https://en.wikipedia.org/wiki/Translation_unit_(programming))
 - [stackoverflow - Don't understand static boolean behavior](https://stackoverflow.com/questions/7475553/dont-understand-static-boolean-behavior/7475584)
 - [Unity Community - Help With C# Static Boolean!](https://answers.unity.com/questions/48802/help-with-c-static-boolean.html)
-- 
+- [위키백과 - 헤더 파일(Header File)](https://ko.wikipedia.org/wiki/%ED%97%A4%EB%8D%94_%ED%8C%8C%EC%9D%BC)
