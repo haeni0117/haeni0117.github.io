@@ -1,5 +1,5 @@
 ---
-title: "[cloudday] 정산아선배님 - 삼성전자"
+title: "[cloudday] 정산아선배님(15) - 2021 상반기 취업 과정 "
 categories:
   - Cloudday
 tags:
