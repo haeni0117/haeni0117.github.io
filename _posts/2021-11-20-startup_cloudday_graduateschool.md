@@ -1,5 +1,5 @@
 ---
-title: "[cloudday] 15학번 김가온 선배님 - "스타트업에서 개발자로 일하기" "
+title: "[cloudday] 15학번 김가온 선배님 - "스타트업에서 개발자로 일하기""
 categories:
   - Cloudday
 tags:
@@ -10,6 +10,7 @@ tags:
   - computerscience
 last_modified_at: 2021-11-20T09:06:00-05:00
 ---
+
 ## 학부 동안의 활동
 - 수업에서 배울 수 있는 기본기 활동
 - 컴퓨터그래픽스 : 수업은 들었지만, 프로젝트 경험은 없음, 진입장벽이 높다는 생각
