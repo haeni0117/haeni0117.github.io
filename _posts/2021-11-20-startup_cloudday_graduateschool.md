@@ -1,13 +1,8 @@
 ---
-title: "[cloudday] 15학번 김가온 선배님 - "스타트업에서 개발자로 일하기""
+title: "[cloudday] 김혜민선배님(15) - 대학원에 가기까지 : 지원과정 및 "
 categories:
   - Cloudday
 tags:
-  - startup
-  - developer
-  - cloudday
-  - ewhawomansuniversity
-  - computerscience
 last_modified_at: 2021-11-20T09:06:00-05:00
 ---
 
