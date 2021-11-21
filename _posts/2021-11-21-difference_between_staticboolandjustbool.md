@@ -15,7 +15,7 @@ last_modified_at: 2021-11-20T09:06:00-05:00
 -  로컬 변수라고 하면, 각 로컬마다 다른 값을 가질 수 있다는 거 아닌가..? 내가 static을 잘못 이해하고 있었나?
 -  There will be multiple copies of `read_mess` in your program, <u>one per translation unit which is not the same thing as a header file.</u>
 -  In your case you can most likely approximate <span style="color:blue">"translation unit"</span> as `.cpp` or `.c` or `.cc` file ~~뭔소리야...~~
--  what you meant to do was <u>to declare an extern variable, or static class member and define it in just one translation unit.</u> ~~ㅇㅇ 나도 그거 하고 싶~~
+-  what you meant to do was <u>to declare an extern variable, or static class member and define it in just one translation unit.</u> ~~ㅇㅇ 나도 그거 하고 싶은데~~
 
 ## Translation Unit?
 - In C and C++ programming language terminology
