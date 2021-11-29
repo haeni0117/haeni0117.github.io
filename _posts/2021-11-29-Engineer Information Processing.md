@@ -1,7 +1,7 @@
 ---
 title: "[archive] 개발자격증(정보처리기사/OCP/OCJP/SQLD/LINUX MASTER/네트워크관리사)"
 categories:
-  - unity
+  - 자격증
 tags:
 last_modified_at: 2021-11-20T09:06:00-05:00
 ---
